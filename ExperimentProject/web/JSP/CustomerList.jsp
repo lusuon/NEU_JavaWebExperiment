@@ -11,6 +11,27 @@
     <title>Title</title>
 </head>
 <body>
-
+<div>
+  <h1>客户列表</h1><br>
+</div>
+<form method='post' action='login.do'> /待修改
+        <table bgcolor='#cccccc'>
+            <tr>
+                <td colspan='2'><h2>查询条件</h2></td>
+            <tr>
+                <td>用户ID：</td>
+                <td><input type='text' name='id'></td>
+            </tr>
+            <tr>
+                <td>用户姓名：</td>
+                <td><input type='password' name='name'></td>
+            </tr>
+            <tr>
+                <td colspan='2' align='center'><input type='submit' value='查询'></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+//未完工，显示表格部分以下未开始
 </body>
 </html>
