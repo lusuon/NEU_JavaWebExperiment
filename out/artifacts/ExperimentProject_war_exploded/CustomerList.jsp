@@ -14,7 +14,8 @@
   <h1>客户列表</h1><br>
 </div>
 <div>
-    <form method='post' action='login.do'> /待修改
+    <form method='post' action='customer.do'> /待修改
+        <input hidden name="mode" value="search">
         <table bgcolor='#cccccc'>
             <tr>
                 <td colspan='2'><h2>查询条件</h2></td>
@@ -32,7 +33,7 @@
         </table>
     </form>
 </div>
-//未完工，显示表格部分以下未开始
+//按钮未完工
 <%
     Class.forName("com.mysql.jdbc.Driver");
     System.out.println("Connecting to database...");
@@ -53,6 +54,7 @@
         <th field ="4" width="50">文化程度</th>
         <th field ="5" width="50">职业</th>
         <th field ="6" width="50">住址</th>
+        <th field ="7" width="50">操作</th>
     </tr>
     </thead>
 
@@ -90,6 +92,17 @@
                 <%
                     out.print(rs.getString("home"));
                 %>
+            </td>
+            <td>
+                
+                <input hidden name="id" value= rs.getString("id")>
+                <input hidden name="name" value= rs.getString("name")>
+                <input hidden name="gender" value= rs.getString("gender")>
+                <input hidden name="education" value= rs.getString("education")>
+                <input hidden name="job" value= rs.getString("job")>
+                <input hidden name="home" value= rs.getString("home")>
+                <button type="button" name ="mode" value="delete">删除</button>
+                <button type="submit" name ="mode" value="modify">修改（如何向修改页传参？-考虑httpSession）</button>
             </td>
         </tr>
     </tbody>

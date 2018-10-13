@@ -94,7 +94,12 @@
                 %>
             </td>
             <td>
-                <button type="button" name ="mode" value="delete">删除</button>
+                <%
+                    //删除button
+                    StringBuilder sbval = new StringBuilder();
+                    sbval.append("customer.do?mode=delete")
+                %>
+                <button type="submit" value="delete">删除</button>
                 <button type="submit" name ="mode" value="modify">修改（如何向修改页传参？-考虑httpSession）</button>
             </td>
         </tr>
