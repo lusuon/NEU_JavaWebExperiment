@@ -7,13 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e15cad93-a7a7-4bc8-a31f-da3478634b39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ExperimentProject/src/TestDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ExperimentProject_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ExperimentProject_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/TestDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/TestDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentProject/src/customer/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/customer/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerAdd.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerModify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/TestDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/TestDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/customer/IndexServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/customer/IndexServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentProject/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/JSP/CustomerAdd.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/JSP/CustomerList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/JSP/CustomerModify.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/TestDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/TestDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/customer/IndexServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/customer/IndexServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,53 +72,76 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1819681637">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="983" />
+          <entry key="jsp" value="666" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="983" />
+          <entry key="JSP" value="666" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExperimentProject/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="114">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/JSP学习笔记随书光盘/labs/CH4/Gossip/WebContent/index.html">
+        <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerList.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="421">
+              <caret line="96" column="64" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
               <folding>
-                <element signature="n#form#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#form#0;n#div#1;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#table#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerAdd.jsp">
+        <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-245">
-              <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="18" selection-end-column="57" />
+            <state relative-caret-position="304">
+              <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerModify.jsp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="247">
+              <caret line="29" column="53" lean-forward="true" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -122,19 +154,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="171">
               <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExperimentProject/src/customer/IndexServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="142">
+              <caret line="74" column="88" selection-start-line="74" selection-start-column="88" selection-end-line="74" selection-end-column="88" />
               <folding>
-                <element signature="method#loginDBConnection#0;class#IndexServlet#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1208#1223#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,6 +183,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>'</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&quot;</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -162,12 +203,15 @@
         <option value="$PROJECT_DIR$/ExperimentProject/web/List.jsp" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/Add.jsp" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/Change.jsp" />
-        <option value="$PROJECT_DIR$/ExperimentProject/src/TestDB.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/index.jsp" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerList.jsp" />
-        <option value="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerAdd.jsp" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerModify.jsp" />
+        <option value="$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerAdd.jsp" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/TestDB.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp" />
+        <option value="$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/customer/IndexServlet.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp" />
       </list>
     </option>
   </component>
@@ -185,9 +229,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="width" value="1100" />
-    <option name="height" value="1391" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -195,8 +239,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -219,41 +261,31 @@
             <path>
               <item name="NEU_JavaWebExperiment" type="b2602c69:ProjectViewProjectNode" />
               <item name="ExperimentProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="IndexServlet" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="NEU_JavaWebExperiment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExperimentProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NEU_JavaWebExperiment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExperimentProject" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="JSP" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539404816566" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539417886980" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\java\NEU_JavaWebExperiment\ExperimentProject\web" />
       <recent name="C:\Users\54234\Documents\GitHub\NEU_JavaWebExperiment\ExperimentProject\web\JSP" />
     </key>
   </component>
@@ -474,27 +506,29 @@
       <updated>1539335342973</updated>
       <workItem from="1539335349137" duration="2140000" />
       <workItem from="1539390858369" duration="12053000" />
+      <workItem from="1539414546056" duration="3486000" />
+      <workItem from="1539425100505" duration="11930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14193000" />
+    <option name="totallyTimeSpent" value="29609000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4972875" visible="true" weight="0.12097351" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49285713" weight="0.12399464" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.5027125" side_tool="true" visible="true" weight="0.12097351" />
+      <window_info id="Web" order="7" sideWeight="0.50714284" side_tool="true" weight="0.12399464" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31047383" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40425533" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -502,8 +536,8 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32955974" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32907802" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -526,68 +560,64 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Desktop/JSP学习笔记随书光盘/labs/CH4/Gossip/WebContent/index.html" />
     <entry file="file://$PROJECT_DIR$/ExperimentProject/src/TestDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="118" selection-start-line="6" selection-start-column="118" selection-end-line="6" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/JSP学习笔记随书光盘/labs/CH4/Gossip/WebContent/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="38" />
+        <state relative-caret-position="-827">
+          <caret line="6" column="118" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="118" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExperimentProject/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="114">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExperimentProject/ExperimentProject.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerModify.jsp">
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="304">
+          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerList.jsp">
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding>
-            <element signature="n#form#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/JSP/CustomerAdd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="18" selection-end-column="57" />
+        <state relative-caret-position="171">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExperimentProject/src/customer/IndexServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        <state relative-caret-position="142">
+          <caret line="74" column="88" selection-start-line="74" selection-start-column="88" selection-end-line="74" selection-end-column="88" />
           <folding>
-            <element signature="method#loginDBConnection#0;class#IndexServlet#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1208#1223#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="96" column="64" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
+          <folding>
+            <element signature="n#form#0;n#div#1;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#table#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="29" column="53" lean-forward="true" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -657,6 +687,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Java EE 6-Java EE 6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

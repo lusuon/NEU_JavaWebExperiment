@@ -8,14 +8,14 @@ public class TestDB {
         Connection conn = null;
         Statement stmt = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             //Execute a query
             System.out.println("Creating statement...");
             stmt = conn.createStatement();
             String sql;
-            sql = "SELECT ID,NAME,GENDER,JOB,EDUCATION,HOME  FROM customer_info";
+            sql = "SELECT *  FROM customer_info";
             ResultSet rs = stmt.executeQuery(sql);
 
             //NOT FINISH READING YET!!!!!!!!!!!!!!!!!!!!!!!!

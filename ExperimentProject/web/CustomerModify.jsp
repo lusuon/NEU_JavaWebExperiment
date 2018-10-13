@@ -2,20 +2,21 @@
   Created by IntelliJ IDEA.
   User: 54234
   Date: 2018-10-12
-  Time: 17:25
+  Time: 17:26
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>添加客户</title>
+    <title>修改客户信息</title>
 </head>
 <body>
   <div>
-    <h1>添加客户</h1>
+    <h1>修改客户信息</h1>
   </div>
   <div>
-    <form method='post' action='login.do'> //表单action未修改
+    <form method='post' action='customer.do'>
+        <input type = "hidden" name = "mode" value="modify">
         <table bgcolor='#cccccc'>
                 <td>客户ID：</td>
                 <td><input type='text' name='id'></td>
@@ -37,13 +38,14 @@
                 <td>文化程度：</td>
                 <td>
                     <select name="education">
-                    <option value="小学以下">小学以下</option>
-                    <option value="小学">小学</option>
-                    <option value="初中">初中</option>
-                    <option value="高中">高中</option>
-                    <option value="本科">本科</option>
-                    <option value="硕士">硕士</option>
-                    <option value="博士">博士</option>
+                        <option value=""></option>
+                        <option value="小学以下">小学以下</option>
+                        <option value="小学">小学</option>
+                        <option value="初中">初中</option>
+                        <option value="高中">高中</option>
+                        <option value="本科">本科</option>
+                        <option value="硕士">硕士</option>
+                        <option value="博士">博士</option>
                     </select>
                 </td>
             </tr>
@@ -65,8 +67,7 @@
               </a>
           </td>
       </tr>
-
         </div>
-
 </body>
 </html>
+
