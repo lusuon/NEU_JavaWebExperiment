@@ -15,8 +15,7 @@
     <h1>添加客户</h1>
   </div>
   <div>
-    <form method='post' action='customer.do'>
-        <input type = "hidden" name = "mode" value="add">
+    <form method='post' action='login.do'> //表单action未修改
         <table bgcolor='#cccccc'>
                 <td>客户ID：</td>
                 <td><input type='text' name='id'></td>

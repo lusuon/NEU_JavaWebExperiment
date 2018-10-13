@@ -12,5 +12,7 @@
   </head>
   <body>
     <h1>Hello world!</h1>
+    <a href='JSP/CustomerList.jsp'>会员列表</a>
+
   </body>
 </html>
