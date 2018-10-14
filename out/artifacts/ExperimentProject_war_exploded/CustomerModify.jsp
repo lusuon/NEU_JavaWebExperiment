@@ -29,32 +29,23 @@
     <form method='post' action='customer.do'>
         <input type = "hidden" name = "mode" value="modify">
         <table bgcolor='#cccccc'>
-            <td>客户ID：</td></td>
             <%
-                out.print("<td>客户ID："+request.getParameter("id")+"'></td>");
+                out.print("<td>客户ID："+request.getParameter("id")+"</td>");
                 String sql = "SELECT * FROM customer_info WHERE id = "+request.getParameter("id");
                 ResultSet rs = stmt.executeQuery(sql);
             %>
-                <td><input type='text' name='id'></td>
-            </tr>
             <tr>
                 <td>客户姓名：</td>
                 <%
+                    rs.next();
                     out.print("<td><input type='text' name='name' value='"+rs.getString("name")+"'></td>");
                 %>
             </tr>
             <tr>
+                <% String gen = rs.getString("gender") ; %>
                 <td>性别：</td>
-                <%
-                    switch (rs.getString("gender")){
-                        case "男":
-                            out.print("<td><input checked=\"true\" type=\"radio\" name=\"gender\" value=\"男\">男</td>");
-                            out.print("<td><input type=\"radio\" name=\"gender\" value=\"女\">女</td>");
-                        case "女":
-                            out.print("<td><input type=\"radio\" name=\"gender\" value=\"男\">男</td>");
-                            out.print("<td><input checked=\"true\" type=\"radio\" name=\"gender\" value=\"女\">女</td>");
-                    }
-                %>
+                    <td><input type="radio" name="gender" value="男" <%= gen.equals("男")?"Checked":"" %>>男</td>
+                    <td><input type="radio" name="gender" value="女" <%= gen.equals("女")?"Checked":"" %>>女</td>
             </tr>
             <tr>
                 <td>职业：</td>
@@ -63,17 +54,18 @@
                 %>
             </tr>
             <tr>
+                <% String edu = rs.getString("education") ; %>
                 <td>文化程度：</td>
                 <td>
                     <select name="education">
                         <option value="">请选择</option>
-                        <option value="小学以下">小学以下</option>
-                        <option value="小学">小学</option>
-                        <option value="初中">初中</option>
-                        <option value="高中">高中</option>
-                        <option value="本科">本科</option>
-                        <option value="硕士">硕士</option>
-                        <option value="博士">博士</option>
+                        <option value="小学以下" <%= edu.equals("小学以下")?"selected":"" %>>小学以下</option>
+                        <option value="小学" <%= edu.equals("小学")?"selected":"" %>>小学</option>
+                        <option value="初中" <%= edu.equals("初中")?"selected":"" %>>初中</option>
+                        <option value="高中" <%= edu.equals("高中")?"selected":"" %>>高中</option>
+                        <option value="本科" <%= edu.equals("本科")?"selected":"" %>>本科</option>
+                        <option value="硕士" <%= edu.equals("硕士")?"selected":"" %>>硕士</option>
+                        <option value="博士" <%= edu.equals("博士")?"selected":"" %>>博士</option>
                     </select>
                 </td>
             </tr>
@@ -86,6 +78,8 @@
             
 
             <tr>
+
+                <input type = "hidden" name = "id" value="<%=rs.getString("id")%>">
                 <td colspan='2' align='center'><input type='submit' value='保存'></td>
             </tr>
           </table>

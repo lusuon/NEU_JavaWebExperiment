@@ -17,6 +17,7 @@
   <div>
     <form method='post' action='customer.do'>
         <input type = "hidden" name = "mode" value="add">
+
         <table bgcolor='#cccccc'>
                 <td>客户ID：</td>
                 <td><input type='text' name='id'></td>
@@ -56,7 +57,7 @@
             
 
             <tr>
-                <td colspan='2' align='center'><input type='submit' value='保存'></td>
+                <td colspan='2' align='center'><input type='submit'>保存</td>
             </tr>
           </table>
         </form>

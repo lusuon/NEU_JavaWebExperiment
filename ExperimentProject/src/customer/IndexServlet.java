@@ -83,8 +83,22 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
                     request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
                     break;
                 case "search" :
-                    sql = "";
-                    ResultSet rs =stmt.executeQuery(sql);
+                    sbsql.append("SELECT * FROM customer_info WHERE ");
+                    boolean searchDB = false;
+                    if(!request.getParameter("id").equals("")){
+                        sbsql.append("id="+request.getParameter("id"));
+                        searchDB = true;
+                        System.out.println("detect id input");
+                    }else if(!request.getParameter("name").equals("")) {
+                        searchDB = true;
+                        sbsql.append("name LIKE '%" + request.getParameter("name")+"%'");
+                        System.out.println("detect name input");
+                    }
+                    System.out.println(sbsql.toString());
+                    ResultSet rs =stmt.executeQuery(sbsql.toString());
+                    request.setAttribute("result",rs);
+                    request.setAttribute("searchDB",searchDB);
+                    request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
                     break;
                     default: System.out.println("Do nothing.");
             }

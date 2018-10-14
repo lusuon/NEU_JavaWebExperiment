@@ -25,7 +25,7 @@
             </tr>
             <tr>
                 <td>用户姓名：</td>
-                <td><input type='password' name='name'></td>
+                <td><input type='text' name='name'></td>
             </tr>
             <tr>
                 <td colspan='2' align='center'><input type='submit' value='查询'></td>
@@ -36,13 +36,18 @@
 //增加，修改按钮未添加；修改，查询未实现,修改：传入id，使用sql语句查询显示剩余。
 <%
     Class.forName("com.mysql.jdbc.Driver");
-    System.out.println("Connecting to database...");
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true","root", "qpalzm" );
-    //Execute a query
-    System.out.println("Creating statement...");
-    Statement stmt = conn.createStatement();
-    String sql = "SELECT * FROM customer_info";
-    ResultSet rs = stmt.executeQuery(sql);
+    ResultSet rs = null;
+    if(request.getAttribute("searchDB") != null && (boolean)request.getAttribute("searchDB")){
+        rs =(ResultSet)request.getAttribute("result");
+        System.out.println("printing the search result");
+    }else{
+        Statement stmt = conn.createStatement();
+        String sql = "SELECT * FROM customer_info";
+        rs = stmt.executeQuery(sql);
+        System.out.println("printing the whole table");
+        System.out.println(request.getAttribute("searchDB"));
+    }
 %>
 
 <table id="customers" title="用户信息" class="easyui-datagrid" style="width:900px;height:400px;padding-left:200px;" pagination="true" rownumbers="true" fitcolumns="true" singleselect="true" border="1">
@@ -102,14 +107,13 @@
 
                 %>
                 </form>
-                <a href='CustomerModify.jsp'>
-                    <input hidden name ="mode" value="modify">
+                <form method=post action="CustomerModify.jsp">
                     <%
-                        //删除button
+                        //修改button
                         out.print(" <button type=\"submit\" name=\"id\" value="+rs.getString("id")+">修改</button>");
 
                     %>
-                </a>
+                </form>
             </td>
         </tr>
     </tbody>
