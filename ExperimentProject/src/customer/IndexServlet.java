@@ -13,12 +13,13 @@ import java.util.Map;
         initParams={
                 @WebInitParam(name = "USER", value = "root"),
                 @WebInitParam(name = "PASS", value = "qpalzm"),
-                @WebInitParam(name = "DB_URL", value = "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC")
+                @WebInitParam(name = "DB_URL", value = "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true")
         }
 )
 public class IndexServlet extends javax.servlet.http.HttpServlet {
     //接收参数，决定行为
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        System.out.println("post received");
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         //Connection conn  = getDBConnection();
@@ -44,6 +45,7 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             stmt = conn.createStatement();
             StringBuilder sbsql = new StringBuilder();
+            System.out.println("receiving mode");
             switch(mode) {
                 case "add":
                     System.out.println("Adding");
@@ -72,13 +74,19 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
                     }
                     break;
                 case "delete":
-                    sql = "DELETE FROM customer_info WHERE id="+paprameters.get("id");//
+                    System.out.println("delete start");
+                    sql = "DELETE FROM customer_info WHERE id=" + paprameters.get("id");
+
+                    System.out.println("sql initialized");
                     stmt.executeUpdate(sql);
+                    System.out.println("delete complete");
+                    request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
                     break;
                 case "search" :
                     sql = "";
                     ResultSet rs =stmt.executeQuery(sql);
                     break;
+                    default: System.out.println("Do nothing.");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -90,6 +98,8 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-
+        System.out.println("received get request");
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
     }
 }

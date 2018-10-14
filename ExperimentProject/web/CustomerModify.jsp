@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.sql.*" %><%--
   Created by IntelliJ IDEA.
   User: 54234
   Date: 2018-10-12
@@ -6,6 +6,17 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    Class.forName("com.mysql.jdbc.Driver");
+    System.out.println("Connecting to database...");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true","root", "qpalzm" );
+    //Execute a query
+    System.out.println("Creating statement...");
+    Statement stmt = conn.createStatement();
+
+%>
+
 <html>
 <head>
     <title>修改客户信息</title>
@@ -18,27 +29,44 @@
     <form method='post' action='customer.do'>
         <input type = "hidden" name = "mode" value="modify">
         <table bgcolor='#cccccc'>
-                <td>客户ID：</td>
+            <td>客户ID：</td></td>
+            <%
+                out.print("<td>客户ID："+request.getParameter("id")+"'></td>");
+                String sql = "SELECT * FROM customer_info WHERE id = "+request.getParameter("id");
+                ResultSet rs = stmt.executeQuery(sql);
+            %>
                 <td><input type='text' name='id'></td>
             </tr>
             <tr>
                 <td>客户姓名：</td>
-                <td><input type='text' name='name'></td>
+                <%
+                    out.print("<td><input type='text' name='name' value='"+rs.getString("name")+"'></td>");
+                %>
             </tr>
             <tr>
                 <td>性别：</td>
-                <td><input type="radio" name="gender" value="男">男</td>
-                <td><input type="radio" name="gender" value="女">女</td>
+                <%
+                    switch (rs.getString("gender")){
+                        case "男":
+                            out.print("<td><input checked=\"true\" type=\"radio\" name=\"gender\" value=\"男\">男</td>");
+                            out.print("<td><input type=\"radio\" name=\"gender\" value=\"女\">女</td>");
+                        case "女":
+                            out.print("<td><input type=\"radio\" name=\"gender\" value=\"男\">男</td>");
+                            out.print("<td><input checked=\"true\" type=\"radio\" name=\"gender\" value=\"女\">女</td>");
+                    }
+                %>
             </tr>
             <tr>
                 <td>职业：</td>
-                <td><input type='text' name='job'></td>
+                <%
+                out.print("<td><input type='text' name='job' value='"+rs.getString("job")+"'></td>");
+                %>
             </tr>
             <tr>
                 <td>文化程度：</td>
                 <td>
                     <select name="education">
-                        <option value=""></option>
+                        <option value="">请选择</option>
                         <option value="小学以下">小学以下</option>
                         <option value="小学">小学</option>
                         <option value="初中">初中</option>
@@ -51,7 +79,9 @@
             </tr>
             <tr>
                 <td>住址：</td>
-                <td><input type='text' name='home'></td>
+                <%
+                    out.print("<td><input type='text' name='home' value='"+rs.getString("home")+"'></td>");
+                %>
             </tr>
             
 

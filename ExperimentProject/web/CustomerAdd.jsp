@@ -38,7 +38,7 @@
                 <td>文化程度：</td>
                 <td>
                     <select name="education">
-                        <option value=""></option>
+                        <option value="">请选择</option>
                         <option value="小学以下">小学以下</option>
                         <option value="小学">小学</option>
                         <option value="初中">初中</option>

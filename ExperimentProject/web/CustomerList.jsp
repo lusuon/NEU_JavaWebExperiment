@@ -33,11 +33,11 @@
         </table>
     </form>
 </div>
-//按钮未完工
+//增加，修改按钮未添加；修改，查询未实现,修改：传入id，使用sql语句查询显示剩余。
 <%
     Class.forName("com.mysql.jdbc.Driver");
     System.out.println("Connecting to database...");
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC","root", "qpalzm" );
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true","root", "qpalzm" );
     //Execute a query
     System.out.println("Creating statement...");
     Statement stmt = conn.createStatement();
@@ -94,13 +94,22 @@
                 %>
             </td>
             <td>
+                <form method='post' action="customer.do">
+                    <input hidden name ="mode" value="delete">
                 <%
                     //删除button
-                    StringBuilder sbval = new StringBuilder();
-                    sbval.append("customer.do?mode=delete")
+                    out.print(" <button type=\"submit\" name=\"id\" value="+rs.getString("id")+">删除</button>");
+
                 %>
-                <button type="submit" value="delete">删除</button>
-                <button type="submit" name ="mode" value="modify">修改（如何向修改页传参？-考虑httpSession）</button>
+                </form>
+                <a href='CustomerModify.jsp'>
+                    <input hidden name ="mode" value="modify">
+                    <%
+                        //删除button
+                        out.print(" <button type=\"submit\" name=\"id\" value="+rs.getString("id")+">修改</button>");
+
+                    %>
+                </a>
             </td>
         </tr>
     </tbody>
@@ -108,6 +117,9 @@
         }
     %>
 </table>
+<a href="CustomerAdd.jsp">
+    <button>添加</button>
+</a>
 
 </body>
 </html>
