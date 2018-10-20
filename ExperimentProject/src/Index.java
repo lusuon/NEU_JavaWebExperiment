@@ -16,7 +16,7 @@ import java.sql.Statement;
         initParams ={
                 @WebInitParam(name = "USER", value = "root"),
                 @WebInitParam(name = "PASS", value = "qpalzm"),
-                @WebInitParam(name = "DB_URL", value = "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true")
+                @WebInitParam(name = "DB_URL", value = "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false")
         }
 )
 public class Index extends HttpServlet {
@@ -39,8 +39,9 @@ public class Index extends HttpServlet {
                 for(Cookie cookie:cookies){
                     String name = cookie.getName();
                     String value = cookie.getValue();
-                    sql = "SELECT FROM admins WHERE id="+value;
+                    sql = "SELECT * FROM admins WHERE id="+value;
                     ResultSet rs = stmt.executeQuery(sql);
+                    rs.next();
                     if(name.equals("admin")&& rs!=null){
                         //cookie允许登录的条件未完成
                         request.getRequestDispatcher("CustomerList.jsp").forward(request,response);

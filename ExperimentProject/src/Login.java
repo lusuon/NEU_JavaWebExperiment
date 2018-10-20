@@ -15,7 +15,7 @@ import java.sql.*;
         initParams = {
                 @WebInitParam(name = "USER", value = "root"),
                 @WebInitParam(name = "PASS", value = "qpalzm"),
-                @WebInitParam(name = "DB_URL", value = "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true")
+                @WebInitParam(name = "DB_URL", value = "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false")
         })
 public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,10 +35,13 @@ public class Login extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             stmt = conn.createStatement();
-            sql = "SELECT FROM admins WHERE id="+id;
+            sql = "SELECT * FROM admins WHERE id='"+id+"'";
+            System.out.println(sql);
             ResultSet rs = stmt.executeQuery(sql);
-            String pw_check = rs.getString("password");
-            if(pw_check !=null){
+            System.out.println(rs);
+            if(rs != null){
+                rs.next();
+                String pw_check = rs.getString("password");
                 if(pw_check == pw){
                     if(login_auto.equals("auto")){
                         Cookie cookie_login = new Cookie("admin",id);
@@ -47,17 +50,19 @@ public class Login extends HttpServlet {
                     }
                     request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
                 }else{
-                    //弹出提示(未测试)，重定向
-                    JOptionPane.showMessageDialog(null, "Wrong password.");
-                    out.print("<script language='javascript'>alert('Wrong password.');window.location.href='Login.jsp';</script>");
+                    //弹出提示，重定向
+                    //JOptionPane.showMessageDialog(null, "Wrong password.");
+                    out.print("<script language='javascript'>alert('Wrong password.');window.location.href='index.jsp';</script>");
                 }
             }else{
-                //弹出提示(未测试)，重定向
-                JOptionPane.showMessageDialog(null, "ID not exist.");
+                //弹出提示，重定向
+                //JOptionPane.showMessageDialog(null, "ID not exist.");
                 out.print("<script language='javascript'>alert('ID not exist.');window.location.href='Login.jsp';</script>");
             }
+
         }catch (Exception e){
             e.printStackTrace();
+
         }finally {
             //finally block used to close resources
             try {
