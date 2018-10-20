@@ -10,7 +10,7 @@
 <%
     Class.forName("com.mysql.jdbc.Driver");
     System.out.println("Connecting to database...");
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true","root", "qpalzm" );
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false","root", "qpalzm" );
     //Execute a query
     System.out.println("Creating statement...");
     Statement stmt = conn.createStatement();

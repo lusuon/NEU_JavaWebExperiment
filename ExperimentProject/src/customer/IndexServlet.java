@@ -13,7 +13,7 @@ import java.util.Map;
         initParams={
                 @WebInitParam(name = "USER", value = "root"),
                 @WebInitParam(name = "PASS", value = "qpalzm"),
-                @WebInitParam(name = "DB_URL", value = "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true")
+                @WebInitParam(name = "DB_URL", value = "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false")
         }
 )
 public class IndexServlet extends javax.servlet.http.HttpServlet {

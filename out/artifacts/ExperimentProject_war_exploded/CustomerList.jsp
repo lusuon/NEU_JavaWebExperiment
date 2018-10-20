@@ -35,8 +35,8 @@
 </div>
 //增加，修改按钮未添加；修改，查询未实现,修改：传入id，使用sql语句查询显示剩余。
 <%
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true","root", "qpalzm" );
+    Class.forName("com.mysql.cj.jdbc.Driver");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false","root", "qpalzm" );
     ResultSet rs = null;
     if(request.getAttribute("searchDB") != null && (boolean)request.getAttribute("searchDB")){
         rs =(ResultSet)request.getAttribute("result");
