@@ -33,7 +33,6 @@
         </table>
     </form>
 </div>
-//增加，修改按钮未添加；修改，查询未实现,修改：传入id，使用sql语句查询显示剩余。
 <%
     Class.forName("com.mysql.jdbc.Driver");
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true","root", "qpalzm" );
@@ -50,15 +49,15 @@
     }
 %>
 
-<table id="customers" title="用户信息" class="easyui-datagrid" style="width:900px;height:400px;padding-left:200px;" pagination="true" rownumbers="true" fitcolumns="true" singleselect="true" border="1">
+<table id="customers" title="用户信息" class="easyui-datagrid" pagination="true" rownumbers="true" fitcolumns="true" singleselect="true" border="1">
     <thead>
     <tr>
         <th field ="1" width="50">客户ID</th>
-        <th field ="2" width="50">客户姓名</th>
+        <th field ="2" width="100">客户姓名</th>
         <th field ="3" width="50">性别</th>
         <th field ="4" width="50">文化程度</th>
         <th field ="5" width="50">职业</th>
-        <th field ="6" width="50">住址</th>
+        <th field ="6" width="300">住址</th>
         <th field ="7" width="50">操作</th>
     </tr>
     </thead>
