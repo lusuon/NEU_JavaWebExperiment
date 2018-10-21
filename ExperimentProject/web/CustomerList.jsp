@@ -124,5 +124,9 @@
     <button>添加</button>
 </a>
 
+<a href="logout.do">
+    <button>注销</button>
+</a>
+
 </body>
 </html>

@@ -39,11 +39,11 @@ public class Login extends HttpServlet {
             System.out.println(sql);
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println(rs);
-            if(rs != null){
-                rs.next();
+            if(rs.next()){
                 String pw_check = rs.getString("password");
-                if(pw_check == pw){
-                    if(login_auto.equals("auto")){
+                if(pw_check.equals(pw)){
+                    System.out.println("pw correct");
+                    if(login_auto!= null && login_auto.equals("auto")){
                         Cookie cookie_login = new Cookie("admin",id);
                         cookie_login.setMaxAge(7*24*60*60);
                         response.addCookie(cookie_login);
@@ -57,7 +57,7 @@ public class Login extends HttpServlet {
             }else{
                 //弹出提示，重定向
                 //JOptionPane.showMessageDialog(null, "ID not exist.");
-                out.print("<script language='javascript'>alert('ID not exist.');window.location.href='Login.jsp';</script>");
+                out.print("<script language='javascript'>alert('ID not exist.');window.location.href='index.jsp';</script>");
             }
 
         }catch (Exception e){
