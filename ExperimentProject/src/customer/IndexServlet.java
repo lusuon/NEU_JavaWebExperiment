@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
+import java.io.PrintWriter;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +24,7 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         //Connection conn  = getDBConnection();
+        PrintWriter out=response.getWriter();
         String USER = getServletConfig().getInitParameter("USER");
         String PASS = getServletConfig().getInitParameter("PASS");
         String DB_URL = getServletConfig().getInitParameter("DB_URL");
@@ -49,11 +51,17 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
             switch(mode) {
                 case "add":
                     System.out.println("Adding");
-                    sbsql.append("INSERT INTO customer_info ").append("VALUES ('").append(paprameters.get("id")+"','").append(paprameters.get("name")+"','").append(paprameters.get("gender")+"','").append(paprameters.get("job")+"','").append(paprameters.get("educaton")+"','").append(paprameters.get("home"));
-                    System.out.println(sbsql.toString());
-                    stmt.executeUpdate(sbsql.toString());
-                    System.out.println("Add success.");
-                    request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
+                    if(request.getParameter("id").equals("")) out.print("<script language='javascript'>alert('ID missed');window.location.href='CustomerAdd.jsp';</script>");
+                    ResultSet check = stmt.executeQuery("SELECT * FROM customer_info WHERE id ="+request.getParameter("id"));
+                    if(check != null ){
+                        out.print("<script language='javascript'>alert('ID duplicate');window.location.href='CustomerAdd.jsp';</script>");
+                    }else{
+                        sbsql.append("INSERT INTO customer_info ").append("VALUES ('").append(paprameters.get("id")+"','").append(paprameters.get("name")+"','").append(paprameters.get("gender")+"','").append(paprameters.get("job")+"','").append(paprameters.get("educaton")+"','").append(paprameters.get("home"));
+                        System.out.println(sbsql.toString());
+                        stmt.executeUpdate(sbsql.toString());
+                        System.out.println("Add success.");
+                        request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
+                    }
                     break;
                 case "modify":
                     sbsql.append("UPDATE customer_info SET ");
@@ -86,13 +94,16 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
                     sbsql.append("SELECT * FROM customer_info WHERE ");
                     boolean searchDB = false;
                     if(!request.getParameter("id").equals("")){
-                        sbsql.append("id="+request.getParameter("id"));
+                        sbsql.append("id='"+request.getParameter("id")+"'");
                         searchDB = true;
                         System.out.println("detect id input");
                     }else if(!request.getParameter("name").equals("")) {
                         searchDB = true;
                         sbsql.append("name LIKE '%" + request.getParameter("name")+"%'");
                         System.out.println("detect name input");
+                    }else{
+                        sbsql = new StringBuilder();
+                        sbsql.append("SELECT * FROM customer_info");
                     }
                     System.out.println(sbsql.toString());
                     ResultSet rs =stmt.executeQuery(sbsql.toString());
