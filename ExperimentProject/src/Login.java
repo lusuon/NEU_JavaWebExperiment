@@ -5,10 +5,11 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
+import java.util.*;
+import java.util.Date;
 
 @WebServlet(name = "Login",
         urlPatterns = "/login.do",
@@ -48,6 +49,7 @@ public class Login extends HttpServlet {
                         cookie_login.setMaxAge(7*24*60*60);
                         response.addCookie(cookie_login);
                     }
+                    Cookie login_time = new Cookie("login_time",new Date().toString());
                     request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
                 }else{
                     //弹出提示，重定向

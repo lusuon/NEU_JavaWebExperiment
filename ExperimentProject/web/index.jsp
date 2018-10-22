@@ -16,16 +16,16 @@
         Connection conn = null;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false","root", "qpalzm" );
             //Execute a query
-            System.out.println("Creating statement...");
             stmt = conn.createStatement();
             Cookie[] cookies = request.getCookies();
             if(cookies!=null){
                 for(Cookie cookie:cookies){
                     String name = cookie.getName();
                     String value = cookie.getValue();
+                    System.out.println(name);
+                    System.out.println(value);
                     if(name.equals("admin")){
                         String sql = "SELECT * FROM admins WHERE id='"+value+"'";
                         ResultSet rs = stmt.executeQuery(sql);

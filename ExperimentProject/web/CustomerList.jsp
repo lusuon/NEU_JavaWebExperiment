@@ -39,13 +39,10 @@
     ResultSet rs = null;
     if(request.getAttribute("searchDB") != null && (boolean)request.getAttribute("searchDB")){
         rs =(ResultSet)request.getAttribute("result");
-        System.out.println("printing the search result");
     }else{
         Statement stmt = conn.createStatement();
         String sql = "SELECT * FROM customer_info";
         rs = stmt.executeQuery(sql);
-        System.out.println("printing the whole table");
-        System.out.println(request.getAttribute("searchDB"));
     }
 %>
 

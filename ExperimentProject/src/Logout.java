@@ -9,14 +9,19 @@ import java.io.IOException;
 @WebServlet(name = "Logout",urlPatterns = "/logout.do")
 public class Logout extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Cookie newCookie=new Cookie("admin",null);
-        newCookie.setMaxAge(0);
-        response.sendRedirect("index.jsp");
+        doGet(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Cookie newCookie=new Cookie("admin",null);
-        newCookie.setMaxAge(0);
-        response.sendRedirect("index.jsp");
+        Cookie[] cookies = request.getCookies();
+        for(Cookie cookie:cookies){
+            System.out.println(cookie.getName());
+            if (cookie.getName().equals("admin")){
+                System.out.println("cookie get");
+                cookie.setMaxAge(0);
+                response.addCookie(cookie);//教训，删除cookie必须加入response才有效
+                response.sendRedirect("index.jsp");
+            }
+        }
     }
 }
