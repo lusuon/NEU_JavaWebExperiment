@@ -16,17 +16,18 @@
     Statement stmt = conn.createStatement();
 
 %>
-
+<!DOCTYPE html>
 <html>
 <head>
     <title>修改客户信息</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div>
-    <h1>修改客户信息</h1>
+    <h1 style="text-align:center;vertical-align: center;margin:auto">修改客户信息</h1>
   </div>
   <div>
-    <form method='post' action='customer.do'>
+    <form style="text-align:center;vertical-align: center;margin:auto" method='post' action='customer.do'>
         <input type = "hidden" name = "mode" value="modify">
         <table bgcolor='#cccccc'>
             <%
@@ -75,22 +76,20 @@
                     out.print("<td><input type='text' name='home' value='"+rs.getString("home")+"'></td>");
                 %>
             </tr>
-            
-
             <tr>
-
                 <input type = "hidden" name = "id" value="<%=rs.getString("id")%>">
                 <td colspan='2' align='center'><input type='submit' value='保存'></td>
             </tr>
+            <tr>
+                <td colspan='2' align='center'>
+                    <a href="CustomerList.jsp">
+                        <button>返回</button>
+                    </a>
+                </td>
+            </tr>
           </table>
         </form>
-      <tr>
-          <td colspan='2' align='center'>
-              <a href="CustomerList.jsp">
-                  <button>返回</button>
-              </a>
-          </td>
-      </tr>
+
         </div>
 </body>
 </html>

@@ -1,3 +1,5 @@
+package controller;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Date;
 
-@WebServlet(name = "Login",
+@WebServlet(name = "controller.Login",
         urlPatterns = "/login.do",
         initParams = {
                 @WebInitParam(name = "USER", value = "root"),

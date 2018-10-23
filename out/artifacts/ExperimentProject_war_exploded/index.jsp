@@ -6,9 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Hello</title>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
     <%
@@ -24,9 +26,8 @@
                 for(Cookie cookie:cookies){
                     String name = cookie.getName();
                     String value = cookie.getValue();
-                    System.out.println(name);
-                    System.out.println(value);
                     if(name.equals("admin")){
+                        System.out.println("Index page: cookie found");
                         String sql = "SELECT * FROM admins WHERE id='"+value+"'";
                         ResultSet rs = stmt.executeQuery(sql);
                         if(rs.next()){
@@ -55,17 +56,23 @@
         }
     %>
     <h1 style="text-align:center">Hello world!</h1>
-    <form action="login.do" method="post">
-      <table>
-        <td>管理员ID：</td>
-        <td><input type='text' name='id'></td><br>
-        <td>密码：</td>
-        <td><input type='password' name='password'></td><br>
+    <form action="login.do" method="post" style="text-align:center;vertical-align: center;">
+      <table style="text-align:center;vertical-align: center;margin:auto" >
+
+        <tr style="text-align:center;vertical-align: center;">
+          <td style="text-align:center">管理员ID：</td>
+          <td style="text-align:center"><input type='text' name='id'></td>
+        </tr>
+
+        <tr style="text-align:center;vertical-align: center;">
+          <td style="text-align:center">密码：</td>
+          <td style="text-align:center"><input type='password' name='password'></td>
+        </tr>
       </table>
       自动登录：<input type="checkbox" name="login" value="auto">
       <button type="submit">登录</button>
     </form>
-    <a href='CustomerList.jsp'>会员列表</a>
+    <a href='CustomerList.jsp' style="text-align:center">会员列表</a>
 
   </body>
 </html>

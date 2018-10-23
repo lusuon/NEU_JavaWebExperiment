@@ -41,8 +41,8 @@ public class Index extends HttpServlet {
                     String value = cookie.getValue();
                     sql = "SELECT * FROM admins WHERE id="+value;
                     ResultSet rs = stmt.executeQuery(sql);
-                    rs.next();
-                    if(name.equals("admin")&& rs!=null){
+                    //rs.next();
+                    if(rs.next()){
                         //cookie允许登录的条件未完成
                         request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
                         return;

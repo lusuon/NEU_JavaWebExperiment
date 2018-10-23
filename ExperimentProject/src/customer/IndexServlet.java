@@ -52,15 +52,17 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
                 case "add":
                     System.out.println("Adding");
                     if(request.getParameter("id").equals("")) out.print("<script language='javascript'>alert('ID missed');window.location.href='CustomerAdd.jsp';</script>");
-                    ResultSet check = stmt.executeQuery("SELECT * FROM customer_info WHERE id ="+request.getParameter("id"));
-                    if(check != null ){
+                    ResultSet check = stmt.executeQuery("SELECT * FROM customer_info WHERE id =\""+request.getParameter("id")+"\"");
+                    System.out.println("SELECT * FROM customer_info WHERE id ="+request.getParameter("id"));
+                    if(check.next()){
                         out.print("<script language='javascript'>alert('ID duplicate');window.location.href='CustomerAdd.jsp';</script>");
                     }else{
-                        sbsql.append("INSERT INTO customer_info ").append("VALUES ('").append(paprameters.get("id")+"','").append(paprameters.get("name")+"','").append(paprameters.get("gender")+"','").append(paprameters.get("job")+"','").append(paprameters.get("educaton")+"','").append(paprameters.get("home"));
+                        sbsql.append("INSERT INTO customer_info ").append("VALUES ('").append(paprameters.get("id")+"','").append(paprameters.get("name")+"','").append(paprameters.get("gender")+"','").append(paprameters.get("job")+"','").append(paprameters.get("education")+"','").append(paprameters.get("home")).append("')");
                         System.out.println(sbsql.toString());
                         stmt.executeUpdate(sbsql.toString());
                         System.out.println("Add success.");
                         request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
+
                     }
                     break;
                 case "modify":
@@ -83,7 +85,7 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
                     break;
                 case "delete":
                     System.out.println("delete start");
-                    sql = "DELETE FROM customer_info WHERE id=" + paprameters.get("id");
+                    sql = "DELETE FROM customer_info WHERE id='" + paprameters.get("id")+"'";
 
                     System.out.println("sql initialized");
                     stmt.executeUpdate(sql);
