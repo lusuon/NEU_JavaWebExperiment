@@ -34,6 +34,14 @@
     </form>
 </div>
 <%
+    for (Cookie cookie:request.getCookies()) {
+        if (cookie.getName().equals("last_login_time")) {
+            out.print("最近一周登录时间：" + cookie.getValue());
+        }
+        if (cookie.getName().equals("login_times")) {
+            out.print("您已登陆了：" + cookie.getValue()+"次");
+        }
+    }
     Class.forName("com.mysql.cj.jdbc.Driver");
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false","root", "qpalzm" );
     ResultSet rs = null;

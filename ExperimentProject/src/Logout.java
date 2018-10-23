@@ -13,6 +13,10 @@ public class Logout extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if((Boolean) request.getSession().getAttribute("auto")==null){
+            request.getSession().invalidate();
+            response.sendRedirect("index.jsp");
+        }
         Cookie[] cookies = request.getCookies();
         for(Cookie cookie:cookies){
             System.out.println(cookie.getName());

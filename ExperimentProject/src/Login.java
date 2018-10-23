@@ -7,7 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLDecoder;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Date;
 
@@ -48,8 +50,30 @@ public class Login extends HttpServlet {
                         Cookie cookie_login = new Cookie("admin",id);
                         cookie_login.setMaxAge(7*24*60*60);
                         response.addCookie(cookie_login);
+                        request.getSession().setAttribute("auto",true);
                     }
-                    Cookie login_time = new Cookie("login_time",new Date().toString());
+                    SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd-hh:mm:ss");
+                    String curTime=format.format(new Date());
+                    Cookie last_login_time = new Cookie("last_login_time", curTime);
+                    response.addCookie(last_login_time);
+                    Boolean first_login = true;
+                    for (Cookie cookie:request.getCookies()) {
+                        if(cookie.getName().equals("login_times")){
+                            first_login = false;
+                            int times = Integer.parseInt(cookie.getValue())+1;
+                            Cookie login_times = new Cookie(cookie.getName(),Integer.toString(times));
+                            login_times.setMaxAge(7*24*60*60);
+                            response.addCookie(login_times);
+
+                        }
+                    }
+                    if(first_login) {
+                        Cookie login_times = new Cookie("login_times","1");
+                        login_times.setMaxAge(7*24*60*60);
+                        response.addCookie(login_times);
+                    }
+
+                    last_login_time.setMaxAge(7*24*60*60);
                     request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
                 }else{
                     //弹出提示，重定向
