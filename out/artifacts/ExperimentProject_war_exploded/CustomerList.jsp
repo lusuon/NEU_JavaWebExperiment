@@ -12,43 +12,59 @@
     <title>客户列表</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<div>
-  <h1 style="text-align: center">客户列表</h1><br>
-</div>
-<div name="Use of cookies" style="text-align:center;vertical-align: center;margin:auto">
-    <%
-        for (Cookie cookie:request.getCookies()) {
-            if (cookie.getName().equals("last_login_time")) {
-                out.print("最近一周登录时间：" + cookie.getValue());
-            }
-    %>
-    <br>
-    <%
-            if (cookie.getName().equals("login_times")) {
-                out.print("您已登陆了：" + cookie.getValue()+"次");
-            }
-        }
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false","root", "qpalzm" );
-        ResultSet rs = null;
-        if(request.getAttribute("searchDB") != null && (boolean)request.getAttribute("searchDB")){
-            rs =(ResultSet)request.getAttribute("result");
-        }else{
-            Statement stmt = conn.createStatement();
-            String sql = "SELECT * FROM customer_info";
-            rs = stmt.executeQuery(sql);
-        }
-    %>
-</div>
-<div style="text-align:center;vertical-align: center;margin:auto">
-    <a href="CustomerAdd.jsp" >
-        <button>添加</button>
-    </a>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    用户管理系统 <small>用户列表</small>
+                </h1>
+            </div>
+            <div class="jumbotron well">
+                <h4>
+                    <div name="Use of cookies" style="text-align:center;vertical-align: center;margin:auto">
+                        <%
+                            out.print("您好，" + request.getParameter("id"));
+                            for (Cookie cookie:request.getCookies()) {
+                                if (cookie.getName().equals("last_login_time")) {
+                                    out.print("最近一周登录时间：" + cookie.getValue());
+                                }
+                        %>
+                        <br>
+                        <%
+                                if (cookie.getName().equals("login_times")) {
+                                    out.print("您已登陆了：" + cookie.getValue()+"次");
+                                }
+                            }
+                            Class.forName("com.mysql.cj.jdbc.Driver");
+                            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false","root", "qpalzm" );
+                            ResultSet rs = null;
+                            if(request.getAttribute("searchDB") != null && (boolean)request.getAttribute("searchDB")){
+                                rs =(ResultSet)request.getAttribute("result");
+                            }else{
+                                Statement stmt = conn.createStatement();
+                                String sql = "SELECT * FROM customer_info";
+                                rs = stmt.executeQuery(sql);
+                            }
+                        %>
+                    </div>
+                </h4>
 
-    <a href="logout.do" style="text-align:center;vertical-align: center;margin:auto">
-        <button>注销</button>
-    </a>
-</div>
+                <div style="text-align:center;vertical-align: center;margin:auto">
+                    <a class="btn btn-primary btn-large" href="CustomerAdd.jsp" >
+                        添加
+                    </a>
+
+                    <a class="btn btn-primary btn-large" href="logout.do" style="text-align:center;vertical-align: center;margin:auto">
+                        注销
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 <div>
     <form method='post' action='customer.do'>
         <input hidden name="mode" value="search">
@@ -145,7 +161,7 @@
         }
     %>
 </table>
-
+</div>
 
 
 
