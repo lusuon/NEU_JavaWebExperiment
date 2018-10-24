@@ -48,13 +48,14 @@ public class Login extends HttpServlet {
                 String pw_check = rs.getString("password");
                 if(pw_check.equals(pw)){
                     System.out.println("pw correct");
+                    request.getSession().setAttribute("id",request.getParameter("id"));
                     if(login_auto!= null && login_auto.equals("auto")){
                         Cookie cookie_login = new Cookie("admin",id);
                         cookie_login.setMaxAge(7*24*60*60);
                         response.addCookie(cookie_login);
                         request.getSession().setAttribute("auto",true);
                     }
-                    SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd-hh:mm:ss");
+                    SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd/hh:mm:ss");
                     String curTime=format.format(new Date());
                     Cookie last_login_time = new Cookie("last_login_time", curTime);
                     response.addCookie(last_login_time);

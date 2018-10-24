@@ -13,32 +13,46 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <h1 style="text-align:center;vertical-align: center;margin:auto">添加客户</h1>
-  </div>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    客户管理系统 <small>添加客户 <small><a href="CustomerList.jsp">返回主系统</a></small> </small>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div>
+        <h1 style="text-align:center;vertical-align: center;margin:auto">添加客户</h1>
+    </div>
+    -->
   <div style="text-align:center;vertical-align: center;margin:auto">
     <form method='post' action='customer.do' style="text-align:center;vertical-align: center;margin:auto">
         <input type = "hidden" name = "mode" value="add">
-        <table bgcolor='#cccccc' style="text-align:center;vertical-align: center;margin:auto">
-            <tr>
-                <td>客户ID：</td>
-                <td><input type='text' name='id'></td>
+        <table class="table table-striped table-hover table-condensed" rownumbers="true" fitcolumns="true" singleselect="true"  >
+            <tr class="text-left">
+                <td class="text-right">客户ID：</td>
+                <td><input type='text' name='id' class="form-control"></td>
             </tr>
-            <tr>
-                <td>客户姓名：</td>
-                <td><input type='text' name='name'></td>
+            <tr class="text-left">
+                <td class="text-right">客户姓名：</td>
+                <td><input type='text' name='name' class="form-control"></td>
             </tr>
-            <tr>
-                <td>性别：</td>
-                <td><input type="radio" name="gender" value="男">男</td><br><br>
-                <td><input type="radio" name="gender" value="女">女</td>
+            <tr class="text-left">
+                <td class="text-right">性别：</td>
+                <td>
+                    <input type="radio" name="gender" value="男">男
+                    <input type="radio" name="gender" value="女">女
+                </td>
             </tr>
-            <tr>
-                <td>职业：</td>
-                <td><input type='text' name='job'></td>
+            <tr class="text-left">
+                <td class="text-right">职业：</td>
+                <td><input type='text' name='job' class="form-control"></td>
             </tr>
-            <tr>
-                <td>文化程度：</td>
+            <tr class="text-left">
+                <td class="text-right">文化程度：</td>
                 <td>
                     <select name="education">
                         <option value="">请选择</option>
@@ -52,9 +66,9 @@
                     </select>
                 </td>
             </tr>
-            <tr>
-                <td>住址：</td>
-                <td><input type='text' name='home'></td>
+            <tr class="text-left">
+                <td class="text-right">住址：</td>
+                <td><input type='te"text-right"xt' name='home' class="form-control"></td>
             </tr>
             
 
@@ -65,13 +79,11 @@
         </form>
       <tr>
           <td colspan='2' align='center'>
-              <a href="CustomerList.jsp">
-                  <button>返回</button>
-              </a>
+
           </td>
       </tr>
 
         </div>
-
+</div>
 </body>
 </html>

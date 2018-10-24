@@ -13,6 +13,14 @@
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
+  <style>
+      body
+      {
+          background-image:url("Index.jpg");
+          opacity: 0.8;
+      }
+  </style>
+  </head>
     <%
         Statement stmt = null;
         Connection conn = null;
@@ -65,23 +73,25 @@
                         Hello, world!
                     </h1>
                     <p>
-                        <span>This is a simple demo for NEU Java Web experiment.It currently includes a moudle to manage the database of "users".</span>
+                        <span>This is a simple demo for NEU Java Web experiment.It currently includes a module for managing the database of "users".</span>
                     </p>
                     <p>
-                        <a class="btn btn-primary btn-large" href="https://github.com/lusuon/NEU_JavaWebExperiment">Github</a>
+                        <a class="btn btn-primary btn-large" href="https://github.com/lusuon/NEU_JavaWebExperiment">Find me on github</a>
+                    </p>
+                    <p>
+                    <form role="form" class="form-inline" action="login.do" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputID">Admin ID</label><input type="text" class="form-control" id="exampleInputID" name="id"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label><input type="password" class="form-control" id="exampleInputPassword1" name='password' />
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="login" value="auto" />Remember me</label>
+                        </div> <button type="submit" class="btn btn-default">Log in</button>
+                    </form>
                     </p>
                 </div>
-                <form role="form" class="form-inline" action="login.do" method="post">
-                    <div class="form-group">
-                        <label for="exampleInputID">Admin ID</label><input type="text" class="form-control" id="exampleInputID" name="id"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label><input type="password" class="form-control" id="exampleInputPassword1" name='password' />
-                    </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" name="login" value="auto" />Remember me</label>
-                    </div> <button type="submit" class="btn btn-default">Log in</button>
-                </form>
             </div>
         </div>
     </div>
