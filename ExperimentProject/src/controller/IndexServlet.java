@@ -1,4 +1,4 @@
-package customer;
+package controller;
 
 import java.io.IOException;
 
@@ -18,12 +18,24 @@ import java.util.Map;
         }
 )
 public class IndexServlet extends javax.servlet.http.HttpServlet {
-    //接收参数，决定行为
+    /**
+     *
+     * @param request
+     * @param response
+     * @throws javax.servlet.ServletException
+     * @throws IOException
+     *
+     * 由于强制要求使用一个Servlet实现增删改查四功能，因此使用Switch-Case语句，接收传入的模式参数，判断行为。其中，模式选择参数通过隐藏域传入。
+     * 使用HashMap存储传入参数，以实现在部分情况下，过滤会修改数据库的对应字段为空的空值提交。
+     * 使用StringBuilder构造SQL语句，
+     * 使用了简单js语句以提示用户异常输入。
+     *
+     */
+
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         System.out.println("post received");
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        //Connection conn  = getDBConnection();
         PrintWriter out=response.getWriter();
         String USER = getServletConfig().getInitParameter("USER");
         String PASS = getServletConfig().getInitParameter("PASS");
@@ -42,8 +54,6 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
         String mode = request.getParameter("mode");
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            //Open a connection
-            //Database credentials
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             stmt = conn.createStatement();
             StringBuilder sbsql = new StringBuilder();
@@ -73,7 +83,7 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
                             if(entry.getValue() != null || !entry.getValue().equals(""))
                                 sbsql.append(entry.getKey()+"='"+entry.getValue()+"',");
                         }
-                        sbsql.deleteCharAt(sbsql.length()-1);
+                        sbsql.deleteCharAt(sbsql.length()-1);//移除sql语句最末的逗号
                         sbsql.append(" WHERE id = '").append(paprameters.get("id")+"'");
                         System.out.println(sbsql.toString());
                         stmt.executeUpdate(sbsql.toString());

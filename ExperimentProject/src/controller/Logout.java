@@ -14,33 +14,18 @@ public class Logout extends HttpServlet {
         doGet(request, response);
     }
 
+    /**
+     *
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     *
+     * 对是否勾选自动登录的两种情况设计了对应的处理模式
+     * 有则对Cookie进行删除处理——setMaxAge（0），之后重定向
+     * 否则直接销毁Session再重定向
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        /*
-        if ((Boolean) request.getSession().getAttribute("auto") == null) {
-            System.out.println("NOT auto login");
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("admin")) {
-                    System.out.println("Logging out without auto login,cookie get");
-                    cookie.setMaxAge(0);
-                    response.addCookie(cookie);//教训，删除cookie必须加入response才有效
-                    request.getSession().invalidate();
-                    response.sendRedirect("index.jsp");
-                    return;
-                }
-            }
-        } else {
-            for (Cookie cookie : cookies) {
-                System.out.println(cookie.getName());
-                if (cookie.getName().equals("admin")) {
-                    System.out.println("cookie get");
-                    cookie.setMaxAge(0);
-                    response.addCookie(cookie);//教训，删除cookie必须加入response才有效
-                    response.sendRedirect("index.jsp");
-                }
-            }
-        }
-         */
-
         Cookie[] cookies = request.getCookies();
         for (Cookie cookie : cookies) {
             System.out.println(cookie.getName());
