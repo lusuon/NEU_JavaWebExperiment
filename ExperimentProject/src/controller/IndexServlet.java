@@ -10,12 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet(
-        urlPatterns={"/customer.do"},
-        initParams={
-                @WebInitParam(name = "USER", value = "root"),
-                @WebInitParam(name = "PASS", value = "qpalzm"),
-                @WebInitParam(name = "DB_URL", value = "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false")
-        }
+        urlPatterns={"/customer.do"}
 )
 public class IndexServlet extends javax.servlet.http.HttpServlet {
     /**
@@ -37,9 +32,8 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out=response.getWriter();
-        String USER = getServletConfig().getInitParameter("USER");
-        String PASS = getServletConfig().getInitParameter("PASS");
-        String DB_URL = getServletConfig().getInitParameter("DB_URL");
+        ConnectionPool pool;
+        pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
         HashMap<String,String> paprameters = new HashMap<String,String>();
         Connection conn = null;
         Statement stmt = null;
@@ -53,8 +47,7 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
         //获取模式
         String mode = request.getParameter("mode");
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = pool.getConnection();
             stmt = conn.createStatement();
             StringBuilder sbsql = new StringBuilder();
             System.out.println("receiving mode");
@@ -127,8 +120,15 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        } finally {
+            if (stmt != null) {
+                try {
+                    stmt.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (conn != null) pool.returnConnection(conn);
         }
 
 

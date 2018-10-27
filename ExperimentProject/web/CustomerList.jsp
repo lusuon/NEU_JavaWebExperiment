@@ -1,4 +1,5 @@
-<%@ page import="java.sql.*" %><%--
+<%@ page import="java.sql.*" %>
+<%@ page import="controller.ConnectionPool" %><%--
   Created by IntelliJ IDEA.
   User: 54234
   Date: 2018-10-12
@@ -24,33 +25,25 @@
             <div class="jumbotron well">
                 <h4>
                     <div name="Use of cookies" >
-                        <%
-                            out.print("<h2>您好，" + request.getSession().getAttribute("id")+"</h2>");
-                            for (Cookie cookie:request.getCookies()) {
-                                if (cookie.getName().equals("last_login_time")) {
-                                    out.print("最近一周登录时间：" + cookie.getValue());
-                                }
-                        %>
+                        <h2>您好，<%=request.getSession().getAttribute("id")%></h2>
+                        <% for (Cookie cookie:request.getCookies()) { %>
+                            <%= cookie.getName().equals("last_login_time") ? "最近一周登录时间：" + cookie.getValue():""%>
                         <p>
-                        <%
-                                if (cookie.getName().equals("login_times")) {
-                                    out.print("您已登陆了：" + cookie.getValue()+"次");
-                                }
-                            }
-                            Class.forName("com.mysql.cj.jdbc.Driver");
-                            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false","root", "qpalzm" );
+                            <%= cookie.getName().equals("login_times") ? "您已登录了"+cookie.getValue()+"次":""  %>
+                        <% }
+                            ConnectionPool pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
+                            Connection conn = pool.getConnection();
                             ResultSet rs = null;
+                            Statement stmt = null;
                             if(request.getAttribute("searchDB") != null && (boolean)request.getAttribute("searchDB")){
                                 rs =(ResultSet)request.getAttribute("result");
                             }else{
-                                Statement stmt = conn.createStatement();
+                                stmt = conn.createStatement();
                                 String sql = "SELECT * FROM customer_info";
                                 rs = stmt.executeQuery(sql);
                             }
                         %>
-                            <a class="btn btn-default " href="logout.do" style="margin:auto">
-                                注销
-                            </a>
+                            <a class="btn btn-default " href="logout.do" style="margin:auto">注销</a>
                         </p>
                     </div>
                 </h4>
@@ -81,27 +74,7 @@
         </div>
     </nav>
 <div>
-    <!--
-    <form method='post' action='customer.do'>
-        <input hidden name="mode" value="search">
-        <table bgcolor='#cccccc' style="text-align:center;vertical-align: center;margin:auto">
-            <tr>
-                <td colspan='2'><h2>查询条件</h2></td>
-            <tr>
-                <td>用户ID：</td>
-                <td><input type='text' name='id'></td>
-            </tr>
-            <tr>
-                <td>用户姓名：</td>
-                <td><input type='text' name='name'></td>
-            </tr>
-            <tr>
-                <td colspan='2' align='center'><input type='submit' value='查询'></td>
-            </tr>
-        </table>
-    </form>
-</div>
--->
+
 <table id="customers" title="用户信息" class="table table-striped table-hover table-condensed"   rownumbers="true" fitcolumns="true" singleselect="true" style="text-align:center;vertical-align: center;margin:auto">
     <thead style="text-align:center">
     <tr>
@@ -116,56 +89,27 @@
     </thead>
 
     <tbody>
-        <%
-            while(rs.next()){
-        %>
+        <% while(rs.next()){ %>
         <tr>
-            <td>
-                <%
-                    out.print(rs.getString("id"));
-                %>
-            </td>
-            <td>
-                <%
-                    out.print(rs.getString("name"));
-                %>
-            </td>
-            <td>
-                <%
-                    out.print(rs.getString("gender"));
-                %>
-            </td>
-            <td>
-                <%
-                    out.print(rs.getString("education"));
-                %>
-            </td>
-            <td>
-                <%
-                    out.print(rs.getString("job"));
-                %>
-            </td>
-            <td>
-                <%
-                    out.print(rs.getString("home"));
-                %>
-            </td>
+            <td><%= rs.getString("id")%></td>
+            <td><%= rs.getString("name")%></td>
+            <td><%= rs.getString("gender")%></td>
+            <td><%= rs.getString("education")%></td>
+            <td><%= rs.getString("job") %></td>
+            <td><%= rs.getString("home")%></td>
             <td>
                 <table align='center'>
                 <tr>
                     <td>
                         <form method='post' action="customer.do">
                             <input hidden name ="mode" value="delete">
-                            <%
-                                out.print(" <button class=\"btn btn-danger \" type=\"submit\" name=\"id\" value="+rs.getString("id")+">删除</button>");
-                            %>
+                            <button class="btn btn-danger " type="submit" name="id" value= <%= rs.getString("id")%> >删除</button>
                         </form>
                     </td>
                     <td>
                         <form method=post action="CustomerModify.jsp">
-                            <%
-                                out.print(" <button class=\"btn btn-warning \" type=\"submit\" name=\"id\" value="+rs.getString("id")+">修改</button>");
-                            %>
+                            <input hidden name ="mode" value="modify">
+                            <button class="btn btn-warning " type="submit" name="id" value= <%= rs.getString("id")%> >修改</button>
                         </form>
                     </td>
                 </tr>
@@ -173,8 +117,9 @@
             </td>
         </tr>
     </tbody>
-    <%
-        }
+    <% }//善后
+        if (stmt != null) stmt.close();
+        if (conn != null) pool.returnConnection(conn);
     %>
 </table>
 </div>

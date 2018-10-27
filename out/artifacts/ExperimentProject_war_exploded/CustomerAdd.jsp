@@ -17,17 +17,12 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <div class="page-header">
-                <h1>
-                    客户管理系统 <small>添加客户 <small><a href="CustomerList.jsp">返回主系统</a></small> </small>
+                <h1>客户管理系统 <small>添加客户
+                    <small><a href="CustomerList.jsp">返回主系统</a></small></small>
                 </h1>
             </div>
         </div>
     </div>
-    <!--
-    <div>
-        <h1 style="text-align:center;vertical-align: center;margin:auto">添加客户</h1>
-    </div>
-    -->
   <div style="text-align:center;vertical-align: center;margin:auto">
     <form method='post' action='customer.do' style="text-align:center;vertical-align: center;margin:auto">
         <input type = "hidden" name = "mode" value="add">
@@ -70,19 +65,11 @@
                 <td class="text-right">住址：</td>
                 <td><input type='te"text-right"xt' name='home' class="form-control"></td>
             </tr>
-            
-
             <tr>
                 <td colspan='2' align='center'><input type='submit'></td>
             </tr>
           </table>
         </form>
-      <tr>
-          <td colspan='2' align='center'>
-
-          </td>
-      </tr>
-
         </div>
 </div>
 </body>

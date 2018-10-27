@@ -5,7 +5,10 @@
   Time: 17:13
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@
+        page contentType="text/html;charset=UTF-8" language="java"
+        import="controller.ConnectionPool"
+%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,12 +25,11 @@
   </style>
   </head>
     <%
+        ConnectionPool pool;
+        pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
         Statement stmt = null;
-        Connection conn = null;
+        Connection conn = pool.getConnection();
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false","root", "qpalzm" );
-            //Execute a query
             stmt = conn.createStatement();
             Cookie[] cookies = request.getCookies();
             if(cookies!=null){
@@ -47,20 +49,8 @@
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            {
-                //finally block used to close resources
-                try {
-                    if (stmt != null)
-                        stmt.close();
-                } catch (SQLException se2) {
-                }// nothing we can do
-                try {
-                    if (conn != null)
-                        conn.close();
-                } catch (SQLException se) {
-                    se.printStackTrace();
-                }//end finally try
-            }
+                if (stmt != null) stmt.close();
+                if (conn != null) pool.returnConnection(conn);
         }
     %>
 
@@ -97,24 +87,3 @@
     </div>
   </body>
 </html>
-
-
-<!--
-<h1 style="text-align:center">Hello world!</h1>
-<form action="login.do" method="post" style="text-align:center;vertical-align: center;">
-    <table style="text-align:center;vertical-align: center;margin:auto" >
-        <tr style="text-align:center;vertical-align: center;">
-            <td style="text-align:center">管理员ID：</td>
-            <td style="text-align:center"><input type='text' name='id'></td>
-        </tr>
-
-        <tr style="text-align:center;vertical-align: center;">
-            <td style="text-align:center">密码：</td>
-            <td style="text-align:center"><input type='password' name='password'></td>
-        </tr>
-    </table>
-    自动登录：<input type="checkbox" name="login" value="auto">
-    <button type="submit">登录</button>
-</form>
-<a href='CustomerList.jsp' style="text-align:center">会员列表</a>
--->
