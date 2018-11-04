@@ -7,18 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e15cad93-a7a7-4bc8-a31f-da3478634b39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ExperimentProject/src/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExperimentProject/src/controller/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/controller/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/controller/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/controller/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/controller/IndexServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/controller/IndexServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/controller/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentProject/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/CustomerList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/CustomerList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,28 +26,31 @@
     <session id="-1360070687">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.32" value="2" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.55" value="2" />
           <entry key="project.open.time.67" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="16" />
+          <entry key="java" value="17" />
           <entry key="jpg" value="1" />
-          <entry key="jsp" value="21" />
-          <entry key="xml" value="1" />
+          <entry key="jsp" value="24" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -59,22 +58,24 @@
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="16" />
-          <entry key="JSP" value="21" />
-          <entry key="XML" value="1" />
+          <entry key="JAVA" value="17" />
+          <entry key="JSP" value="24" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3308" />
-          <entry key="jsp" value="2426" />
+          <entry key="java" value="3337" />
+          <entry key="jsp" value="2905" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3307" />
-          <entry key="JSP" value="2426" />
+          <entry key="JAVA" value="3336" />
+          <entry key="JSP" value="2905" />
           <entry key="SQL" value="1" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -126,47 +127,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-              <folding>
-                <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="550">
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="69" column="17" lean-forward="true" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExperimentProject/src/Listener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/src/controller/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="902">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/src/controller/Logout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+            <state relative-caret-position="164">
+              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -174,19 +145,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExperimentProject/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="52" column="62" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="52" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/src/controller/IndexServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1901">
-              <caret line="40" column="58" lean-forward="true" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
+            <state relative-caret-position="484">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#96#244#0#JSP" />
+                <element signature="n#page#1;n#jsp:root#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -241,13 +204,14 @@
         <option value="$PROJECT_DIR$/ExperimentProject/src/controller/Logout.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/Index.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/ConnectionPool.java" />
-        <option value="$PROJECT_DIR$/ExperimentProject/web/index.jsp" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/controller/IndexServlet.java" />
-        <option value="$PROJECT_DIR$/ExperimentProject/src/Listener.java" />
-        <option value="$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/controller/Login.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp" />
+        <option value="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp" />
+        <option value="$PROJECT_DIR$/ExperimentProject/web/index.jsp" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/Listener.java" />
       </list>
     </option>
   </component>
@@ -265,9 +229,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="width" value="1100" />
-    <option name="height" value="1391" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1101" />
+    <option name="height" value="1392" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -276,6 +241,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -299,22 +266,29 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="NEU_JavaWebExperiment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="NEU_JavaWebExperiment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Java EE 6-Java EE 6" type="70bed36:NamedLibraryElementNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540614068646" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/lib" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541213921988" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jstl-1.2.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -358,8 +332,6 @@
       </method>
     </configuration>
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.11" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="ExperimentProject:war exploded">
@@ -572,33 +544,38 @@
       <workItem from="1540380264752" duration="3561000" />
       <workItem from="1540384294662" duration="437000" />
       <workItem from="1540434855955" duration="82000" />
-      <workItem from="1540600330079" duration="12108000" />
+      <workItem from="1540600330079" duration="12457000" />
+      <workItem from="1540903948010" duration="106000" />
+      <workItem from="1541206791417" duration="6714000" />
+      <workItem from="1541214187273" duration="2619000" />
+      <workItem from="1541217137759" duration="1260000" />
+      <workItem from="1541230169760" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113587000" />
+    <option name="totallyTimeSpent" value="124653000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47495362" visible="true" weight="0.13672155" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47256857" visible="true" weight="0.35218325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.5250464" side_tool="true" visible="true" weight="0.13672155" />
+      <window_info id="Web" order="7" sideWeight="0.5267746" side_tool="true" weight="0.13672155" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917705" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.32793018" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.3241895" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32907802" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32793018" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3274559" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.40709218" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32907802" />
@@ -661,13 +638,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Desktop/JSP学习笔记随书光盘/labs/CH4/Gossip/WebContent/index.html" />
     <entry file="file://$PROJECT_DIR$/ExperimentProject/src/TestDB.java" />
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/Downloads/HTML5响应式用户登录界面模板/index.html" />
     <entry file="file://E:/Downloads/HTML5响应式用户登录界面模板/index.jsp" />
     <entry file="file://$PROJECT_DIR$/ExperimentProject/web/index_orgin.jsp" />
@@ -691,44 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#12479#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#setIncrementalConnections#0;class#ConnectionPool#0" />
-            <element signature="method#createConnections#0;class#ConnectionPool#0" />
-            <element signature="method#newConnection#0;class#ConnectionPool#0" />
-            <element signature="method#getConnection#0;class#ConnectionPool#0" />
-            <element signature="method#getFreeConnection#0;class#ConnectionPool#0" />
-            <element signature="method#findFreeConnection#0;class#ConnectionPool#0" />
-            <element signature="method#testConnection#0;class#ConnectionPool#0" />
-            <element signature="method#returnConnection#0;class#ConnectionPool#0" />
-            <element signature="method#refreshConnections#0;class#ConnectionPool#0" />
-            <element signature="method#closeConnectionPool#0;class#ConnectionPool#0" />
-            <element signature="method#closeConnection#0;class#ConnectionPool#0" />
-            <element signature="method#wait#0;class#ConnectionPool#0" />
-            <element signature="class#PooledConnection#0;class#ConnectionPool#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1219">
-          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/controller/Logout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/Listener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -739,37 +671,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/controller/Logout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-776">
+          <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ExperimentProject/src/controller/IndexServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1901">
-          <caret line="40" column="58" lean-forward="true" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-          <folding>
-            <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="52" column="62" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="52" selection-end-column="62" />
+        <state relative-caret-position="-1738">
+          <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="69" column="17" lean-forward="true" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+        <state relative-caret-position="-58">
+          <caret line="25" column="67" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#96#244#0#JSP" />
+            <element signature="n#page#1;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -832,6 +790,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

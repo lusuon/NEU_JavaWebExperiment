@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.sql.*" %><%--
   Created by IntelliJ IDEA.
   User: 54234
@@ -5,8 +6,7 @@
   Time: 17:13
   To change this template use File | Settings | File Templates.
 --%>
-<%@
-        page contentType="text/html;charset=UTF-8" language="java"
+<%@page contentType="text/html;charset=UTF-8" language="java"
         import="controller.ConnectionPool"
 %>
 <!DOCTYPE html>
@@ -24,35 +24,16 @@
       }
   </style>
   </head>
-    <%
-        ConnectionPool pool;
-        pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
-        Statement stmt = null;
-        Connection conn = pool.getConnection();
-        try{
-            stmt = conn.createStatement();
-            Cookie[] cookies = request.getCookies();
-            if(cookies!=null){
-                for(Cookie cookie:cookies){
-                    String name = cookie.getName();
-                    String value = cookie.getValue();
-                    if(name.equals("admin")){
-                        System.out.println("Index page: cookie found");
-                        String sql = "SELECT * FROM admins WHERE id='"+value+"'";
-                        ResultSet rs = stmt.executeQuery(sql);
-                        if(rs.next()){
-                            response.sendRedirect("CustomerList.jsp");
-                        }
-                    }
-                }
-        }
-        }catch (Exception e){
-            e.printStackTrace();
-        }finally {
-                if (stmt != null) stmt.close();
-                if (conn != null) pool.returnConnection(conn);
-        }
-    %>
+
+    <c:if test= "${not empty cookie[\"admin\"]}">
+        <c:set scope="request" var="id" value="${cookie[\"admin\"].value}"></c:set>
+        <%
+            System.out.println("Cookie found.");
+            //以后提升：尝试使用数据库连接池搭配jstl的sql语句
+            response.sendRedirect("CustomerList.jsp");
+        %>
+    </c:if>
+
 
 
     <div class="container">

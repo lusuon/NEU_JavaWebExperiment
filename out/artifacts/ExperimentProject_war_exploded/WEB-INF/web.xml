@@ -7,4 +7,5 @@
         <servlet-name>IndexServlet</servlet-name>
         <servlet-class>controller.IndexServlet</servlet-class>
     </servlet>
+    
 </web-app>

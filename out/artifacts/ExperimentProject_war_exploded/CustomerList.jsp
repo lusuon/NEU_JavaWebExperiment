@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="controller.ConnectionPool" %><%--
   Created by IntelliJ IDEA.
@@ -25,12 +26,15 @@
             <div class="jumbotron well">
                 <h4>
                     <div name="Use of cookies" >
-                        <h2>您好，<%=request.getSession().getAttribute("id")%></h2>
-                        <% for (Cookie cookie:request.getCookies()) { %>
-                            <%= cookie.getName().equals("last_login_time") ? "最近一周登录时间：" + cookie.getValue():""%>
+                        <h2>您好，${sessionScope.id}</h2>
                         <p>
-                            <%= cookie.getName().equals("login_times") ? "您已登录了"+cookie.getValue()+"次":""  %>
-                        <% }
+                        <c:if test = "${not empty cookie[\"last_login_time\"]}"> 最近一周登录时间：${cookie["last_login_time"].value} </c:if>
+                        </p>
+                        <p>
+                        <c:if test = "${not empty cookie[\"login_times\"]}"> 您已登录了 ${cookie["login_times"].value} 次 </c:if>
+
+
+                            <%
                             ConnectionPool pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
                             Connection conn = pool.getConnection();
                             ResultSet rs = null;
@@ -43,6 +47,7 @@
                                 rs = stmt.executeQuery(sql);
                             }
                         %>
+
                             <a class="btn btn-default " href="logout.do" style="margin:auto">注销</a>
                         </p>
                     </div>
