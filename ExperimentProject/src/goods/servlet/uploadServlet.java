@@ -24,9 +24,10 @@ public class uploadServlet extends HttpServlet {
     private static final long serialVersionUID = 123L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         Part input = null;
         String ext_name = "";
-        System.out.println("getting part");
         for(Part part:request.getParts()){
             if (part.getName().equals("file")){
                 input=part;
@@ -50,8 +51,9 @@ public class uploadServlet extends HttpServlet {
 
         // 获取文件的存放目录
         String realPath = request.getServletContext().getRealPath("./") + File.separator +"upload";
-        System.out.println(realPath);
         File file = new File(realPath);
+
+        System.out.println(realPath);
         if (!file.exists()) {
             file.mkdirs();
         }
