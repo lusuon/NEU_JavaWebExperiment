@@ -1,4 +1,4 @@
-import controller.ConnectionPool;
+import goods.util.ConnectionPool;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;

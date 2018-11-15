@@ -7,7 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@page contentType="text/html;charset=UTF-8" language="java"
-        import="controller.ConnectionPool"
+        import="goods.util.ConnectionPool"
 %>
 <!DOCTYPE html>
 <html>
@@ -26,7 +26,7 @@
   </head>
 
     <c:if test= "${not empty cookie[\"admin\"]}">
-        <c:redirect url="http://CustomerList.jsp"/>
+        <c:redirect url="/Goods.jsp"/>
     </c:if>
 
 

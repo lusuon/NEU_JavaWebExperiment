@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="controller.ConnectionPool" %><%--
+<%@ page import="goods.util.ConnectionPool" %><%--
   Created by IntelliJ IDEA.
   User: 54234
   Date: 2018-10-12

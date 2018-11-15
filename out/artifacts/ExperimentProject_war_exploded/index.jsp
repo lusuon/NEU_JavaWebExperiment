@@ -7,7 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@page contentType="text/html;charset=UTF-8" language="java"
-        import="controller.ConnectionPool"
+        import="goods.util.ConnectionPool"
 %>
 <!DOCTYPE html>
 <html>
@@ -26,13 +26,9 @@
   </head>
 
     <c:if test= "${not empty cookie[\"admin\"]}">
-        <c:set scope="request" var="id" value="${cookie[\"admin\"].value}"></c:set>
-        <%
-            System.out.println("Cookie found.");
-            //以后提升：尝试使用数据库连接池搭配jstl的sql语句
-            response.sendRedirect("CustomerList.jsp");
-        %>
+        <c:redirect url="/Goods.jsp"/>
     </c:if>
+
 
 
 

@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*" %>
-<%@ page import="controller.ConnectionPool" %><%--
+<%@ page import="goods.util.ConnectionPool" %><%--
   Created by IntelliJ IDEA.
   User: 54234
   Date: 2018-10-12
@@ -55,7 +55,6 @@
                         <input type="radio" name="gender" value="男" <%= gen.equals("男")?"Checked":"" %>>男
                         <input type="radio" name="gender" value="女" <%= gen.equals("女")?"Checked":"" %>>女
                     </td>
-
                 </tr>
                 <tr class="text-left">
                     <td class="text-right">职业：</td>
