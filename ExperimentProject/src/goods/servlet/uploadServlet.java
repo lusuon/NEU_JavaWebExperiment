@@ -9,10 +9,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.*;
 import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import goods.util.ConnectionPool;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -26,9 +30,16 @@ public class uploadServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+        ConnectionPool pool;
+        pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
+        Connection conn = null;
+        Statement stmt = null;
+
         Part input = null;
         String ext_name = "";
         for(Part part:request.getParts()){
+            //未来改进，使用它获取文件拓展名
+            System.out.println("Type:"+part.getContentType());
             if (part.getName().equals("file")){
                 input=part;
                 String header = part.getHeader("content-disposition");
@@ -40,6 +51,7 @@ public class uploadServlet extends HttpServlet {
                 System.out.println(path.substring(index + 1));
                 path.substring(index + 1).split("\\.");
                 ext_name = path.substring(index + 1).split("\\.")[1];
+
             }
         }
 
@@ -50,7 +62,7 @@ public class uploadServlet extends HttpServlet {
         String name = request.getParameter("fileName")+"."+ext_name;
 
         // 获取文件的存放目录
-        String realPath = request.getServletContext().getRealPath("./") + File.separator +"upload";
+        String realPath = request.getServletContext().getRealPath("./") +"upload";
         File file = new File(realPath);
 
         System.out.println(realPath);
@@ -67,9 +79,27 @@ public class uploadServlet extends HttpServlet {
             outputStream.write(bytes, 0, len);
         }
 
+        //未来改进：获取绝对路径作为存入源
+        System.out.println(file.getAbsolutePath());
+
+
         // 关闭资源
         outputStream.close();
         inputStream.close();
+
+
+        String sql ="";
+        try {
+            conn = pool.getConnection();
+            stmt = conn.createStatement();
+            sql = "UPDATE goods SET path =  "+"'"+"/upload/"+name+ "'" + "WHERE ID ="+request.getParameter("fileName");
+            stmt.executeUpdate(sql);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            System.out.println(sql);
+            pool.returnConnection(conn);
+        }
 
         // 删除临时文件
         input.delete();

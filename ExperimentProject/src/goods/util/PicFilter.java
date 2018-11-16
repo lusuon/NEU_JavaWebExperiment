@@ -47,7 +47,6 @@ public class PicFilter implements Filter {
                 System.out.println(allow.contains(ext_name));
                 if(!allow.contains(ext_name)){
                     out.print("<script language='javascript'>alert('Only pictures are allowed to upload.');window.location.href='Goods.jsp';</script>");
-                    response.sendRedirect("Goods.jsp");
                 }
             }
         }

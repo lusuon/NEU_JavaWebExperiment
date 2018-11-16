@@ -64,7 +64,7 @@
             <sql:query var="result" dataSource="${db}">SELECT * from goods;</sql:query>
             <c:forEach var="row" items="${result.rows}">
             <tr>
-                <td><c:out value="<%=request.getContextPath()%>+"/></td>
+                <td><img alt="图片未上传" src="${row.path}"/></td>
                 <td><c:out value="${row.id}"/></td>
                 <td><c:out value="${row.name}"/></td>
                 <td><c:out value="${row.factory}"/></td>
