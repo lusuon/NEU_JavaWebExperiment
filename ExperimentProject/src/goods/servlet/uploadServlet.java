@@ -38,10 +38,12 @@ public class uploadServlet extends HttpServlet {
         Part input = null;
         String ext_name = "";
         for(Part part:request.getParts()){
-            //未来改进，使用它获取文件拓展名
-            System.out.println("Type:"+part.getContentType());
             if (part.getName().equals("file")){
-                input=part;
+                input = part;
+                //未来改进，使用它获取文件拓展名
+                System.out.println("Type:"+part.getContentType());
+                ext_name = part.getContentType().split("/")[1];
+                /*
                 String header = part.getHeader("content-disposition");
                 String path = header.substring(header.indexOf("filename=") + 10, header.length() - 1);
                 int index = path.lastIndexOf("\\");
@@ -51,7 +53,7 @@ public class uploadServlet extends HttpServlet {
                 System.out.println(path.substring(index + 1));
                 path.substring(index + 1).split("\\.");
                 ext_name = path.substring(index + 1).split("\\.")[1];
-
+                 */
             }
         }
 
