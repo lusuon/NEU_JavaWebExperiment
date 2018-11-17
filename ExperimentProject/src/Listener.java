@@ -4,10 +4,8 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
-import javax.servlet.http.HttpSessionAttributeListener;
-import javax.servlet.http.HttpSessionEvent;
-import javax.servlet.http.HttpSessionListener;
-import javax.servlet.http.HttpSessionBindingEvent;
+import javax.servlet.http.*;
+import java.util.ArrayList;
 
 @WebListener()
 public class Listener implements ServletContextListener,
@@ -38,6 +36,8 @@ public class Listener implements ServletContextListener,
         }
         ServletContext context = sce.getServletContext();
         context.setAttribute("connectionPool",connPool);
+
+
     }
 
     public void contextDestroyed(ServletContextEvent sce) {
@@ -60,10 +60,17 @@ public class Listener implements ServletContextListener,
     // -------------------------------------------------------
     public void sessionCreated(HttpSessionEvent se) {
         /* Session is created. */
+
+        ArrayList<String> errors = new ArrayList<>();
+        HttpSession session = se.getSession();
+        session.setAttribute("errors",errors);
     }
+
+
 
     public void sessionDestroyed(HttpSessionEvent se) {
         /* Session is destroyed. */
+
     }
 
     // -------------------------------------------------------

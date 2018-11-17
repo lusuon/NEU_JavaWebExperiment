@@ -55,7 +55,8 @@
                         </div>
                         <div class="checkbox">
                             <label><input type="checkbox" name="login" value="auto" />Remember me</label>
-                        </div> <button type="submit" class="btn btn-default">Log in</button>
+                        </div>
+                    <button type="submit" class="btn btn-default">Log in</button>
                     </form>
                     </p>
                 </div>

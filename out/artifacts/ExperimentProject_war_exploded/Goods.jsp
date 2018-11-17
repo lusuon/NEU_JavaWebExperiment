@@ -9,11 +9,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>商品列表</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -24,7 +26,6 @@
                     商品管理系统 <small>商品列表</small>
                 </h1>
             </div>
-
             <div class="jumbotron well">
                 <h4>
                     <div name="Use of cookies" >
@@ -62,9 +63,11 @@
                                user="root"  password="qpalzm"
             />
             <sql:query var="result" dataSource="${db}">SELECT * from goods;</sql:query>
+
+
             <c:forEach var="row" items="${result.rows}">
             <tr>
-                <td><img alt="图片未上传" src="${row.path}"/></td>
+                <td><img alt="图片未上传" src="${row.path}" width="100"> </td>
                 <td><c:out value="${row.id}"/></td>
                 <td><c:out value="${row.name}"/></td>
                 <td><c:out value="${row.factory}"/></td>
@@ -73,11 +76,11 @@
                 <td><c:out value="${row.orgin}"/></td>
                 <td><c:out value="${row.desc}"/></td>
                 <td>
-                    <form role="form" action="/upload.do" method="post" enctype="multipart/form-data">
+                    <form role="form" action="/upload.do" method="post" enctype="multipart/form-data" >
                             <table>
                                 <tr>
                                     <input hidden name="fileName" value="${row.id}"/>
-                                    <td><input type="file" name="file" /></td>
+                                    <td><input type="file" name="file" accept="image/x-png,image/gif,image/jpeg" /></td>
                                     <td><button type="submit" class="btn btn-default">上传</button></td>
                                 </tr>
                             </table>

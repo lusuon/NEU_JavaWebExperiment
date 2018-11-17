@@ -18,7 +18,7 @@ public class PicFilter implements Filter {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        String[] exts = {"jpg","png","bmp"};
+        String[] exts = {"jpg","png","bmp","jpeg"};
         for (String s:exts) {
             allow.add(s);
         }
@@ -28,29 +28,25 @@ public class PicFilter implements Filter {
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
 
+        boolean allow_upload = false;
         System.out.println("Filtering");
         for(Part part:request.getParts()){
             if (part.getName().equals("file")){
-                if(part.getSize()==0) out.print("<script language='javascript'>alert('Nothing uploaded.');window.location.href='Goods.jsp';</script>");
-
-                String header = part.getHeader("content-disposition");
-                String path = header.substring(header.indexOf("filename=") + 10, header.length() - 1);
-                int index = path.lastIndexOf("\\");
-                if (index == -1) {
-                    index = path.lastIndexOf("/");
+                System.out.println(part.getSize());
+                String ext_name = part.getContentType().split("/")[1];
+                if(part.getSize()==0) {
+                    out.print("<script language='javascript'>alert('Nothing uploaded.');window.location.href='Goods.jsp';</script>");
+                }else if(!allow.contains(ext_name)){
+                    System.out.println("Not pic");
+                    out.print("<script language='javascript'>alert('Only jpg/bmp/png are allowed.');window.location.href='Goods.jsp';</script>");
+                }else{
+                    allow_upload = true;
+                    request.setAttribute("allow_upload",allow_upload);
                 }
-                System.out.println(path.substring(index + 1));
-                path.substring(index + 1).split("\\.");
-                String ext_name = path.substring(index + 1).split("\\.")[1];
 
 
-                System.out.println(allow.contains(ext_name));
-                if(!allow.contains(ext_name)){
-                    out.print("<script language='javascript'>alert('Only pictures are allowed to upload.');window.location.href='Goods.jsp';</script>");
-                }
             }
         }
-
         chain.doFilter(req, resp);
     }
 
