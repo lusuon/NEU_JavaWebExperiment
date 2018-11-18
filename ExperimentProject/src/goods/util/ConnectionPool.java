@@ -7,38 +7,22 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Enumeration;
-import java.util.ResourceBundle;
 import java.util.Vector;
 
-public class DBUtil {
-        private static String jdbcDriver = ""; // 数据库驱动
-        private static String dbUrl = ""; // 数据 URL
-        private static String dbUsername = ""; // 数据库用户名
-        private static String dbPassword = ""; // 数据库用户密码
+public class ConnectionPool {
+        private String jdbcDriver = ""; // 数据库驱动
+        private String dbUrl = ""; // 数据 URL
+        private String dbUsername = ""; // 数据库用户名
+        private String dbPassword = ""; // 数据库用户密码
         private String testTable = ""; // 测试连接是否可用的测试表名，默认没有测试表
         private int initialConnections = 10; // 连接池的初始大小
         private int incrementalConnections = 5; // 连接池自动增加的大小
         private int maxConnections = 50; // 连接池最大的大小
         private Vector connections = null; // 存放连接池中数据库连接的向量 , 初始时为 null
 
-        private static ResourceBundle rb = ResourceBundle.getBundle("db");
-
-        static{
-            dbUrl = rb.getString("jdbc.url");
-            dbUsername = rb.getString("jdbc.username");
-            dbPassword = rb.getString("jdbc.password");
-            jdbcDriver = rb.getString("jdbc.driver");
-            try {
-                Class.forName(jdbcDriver);
-            }catch (ClassNotFoundException e){
-                e.printStackTrace();
-            }
-        }
-
-
         // 构造器，其中存放的对象为 PooledConnection 型
-        public DBUtil(String jdbcDriver, String dbUrl, String dbUsername,
-                      String dbPassword) {
+        public ConnectionPool(String jdbcDriver, String dbUrl, String dbUsername,
+                              String dbPassword) {
             this.jdbcDriver = jdbcDriver;
             this.dbUrl = dbUrl;
             this.dbUsername = dbUsername;
@@ -337,4 +321,22 @@ public class DBUtil {
             }
         }
 
+
+        public static void main(String[] args) {
+            ConnectionPool connPool
+                    = new ConnectionPool("com.mysql.jdbc.Driver",
+                    "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false",
+                    "root",
+                    "qpalzm");
+            try {
+                connPool.createPool();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+            try {
+                Connection conn = connPool.getConnection();
+            } catch (SQLException ex1) {
+                ex1.printStackTrace();
+            }
+        }
 }

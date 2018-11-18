@@ -1,6 +1,6 @@
 package admin;
 
-import goods.util.DBUtil;
+import goods.util.ConnectionPool;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,8 +37,8 @@ public class Login extends HttpServlet {
         PrintWriter out =response.getWriter();
         Connection conn = null;
         Statement stmt = null;
-        DBUtil pool;
-        pool = (DBUtil) request.getServletContext().getAttribute("connectionPool");
+        ConnectionPool pool;
+        pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
         try {
             conn = pool.getConnection();
             stmt = conn.createStatement();

@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="goods.util.DBUtil" %><%--
+<%@ page import="goods.util.ConnectionPool" %><%--
   Created by IntelliJ IDEA.
   User: 54234
   Date: 2018-10-12
@@ -35,7 +35,7 @@
 
 
                             <%
-                            DBUtil pool = (DBUtil) request.getServletContext().getAttribute("connectionPool");
+                            ConnectionPool pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
                             Connection conn = pool.getConnection();
                             ResultSet rs = null;
                             Statement stmt = null;

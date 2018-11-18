@@ -8,11 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.*;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
-import goods.util.DBUtil;
+import goods.util.ConnectionPool;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 @MultipartConfig
 @WebServlet(name = "uploadServlet",urlPatterns = "/upload.do")
@@ -24,8 +31,8 @@ public class uploadServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         if((boolean)request.getAttribute("allow_upload")) {
-            DBUtil pool;
-            pool = (DBUtil) request.getServletContext().getAttribute("connectionPool");
+            ConnectionPool pool;
+            pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
             Connection conn = null;
             Statement stmt = null;
 

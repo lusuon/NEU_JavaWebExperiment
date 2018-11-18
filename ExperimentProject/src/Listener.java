@@ -1,4 +1,4 @@
-import goods.util.DBUtil;
+import goods.util.ConnectionPool;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -24,8 +24,8 @@ public class Listener implements ServletContextListener,
          You can initialize servlet context related data here.
       */
         //初始化连接池
-        DBUtil connPool
-                = new DBUtil("com.mysql.jdbc.Driver",
+        ConnectionPool connPool
+                = new ConnectionPool("com.mysql.jdbc.Driver",
                 "jdbc:mysql://localhost/neu_javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false",
                 "root",
                 "qpalzm");
@@ -47,7 +47,7 @@ public class Listener implements ServletContextListener,
       */
         ServletContext context = sce.getServletContext();
       //销毁连接池
-        DBUtil connPool = (DBUtil)context.getAttribute("connectionPool");
+        ConnectionPool connPool = (ConnectionPool)context.getAttribute("connectionPool");
         try {
             connPool.closeConnectionPool();
         } catch (Exception ex) {
@@ -60,6 +60,10 @@ public class Listener implements ServletContextListener,
     // -------------------------------------------------------
     public void sessionCreated(HttpSessionEvent se) {
         /* Session is created. */
+
+        ArrayList<String> errors = new ArrayList<>();
+        HttpSession session = se.getSession();
+        session.setAttribute("errors",errors);
     }
 
 
