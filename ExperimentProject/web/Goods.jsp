@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="goods.util.ConnectionPool" %><%--
+<%@ page import="goods.util.DBUtil" %><%--
   Created by IntelliJ IDEA.
   User: 54234
   Date: 2018-10-12

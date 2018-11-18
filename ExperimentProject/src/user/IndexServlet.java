@@ -1,6 +1,6 @@
 package user;
 
-import goods.util.ConnectionPool;
+import goods.util.DBUtil;
 
 import java.io.IOException;
 
@@ -33,8 +33,8 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out=response.getWriter();
-        ConnectionPool pool;
-        pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
+        DBUtil pool;
+        pool = (DBUtil) request.getServletContext().getAttribute("connectionPool");
         HashMap<String,String> paprameters = new HashMap<String,String>();
         Connection conn = null;
         Statement stmt = null;
