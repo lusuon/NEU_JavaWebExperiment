@@ -1,3 +1,5 @@
+package goods.util;
+
 import goods.util.ConnectionPool;
 
 import javax.servlet.ServletContext;
@@ -46,7 +48,7 @@ public class Listener implements ServletContextListener,
          Application Server shuts down.
       */
         ServletContext context = sce.getServletContext();
-      //销毁连接池
+        //销毁连接池
         ConnectionPool connPool = (ConnectionPool)context.getAttribute("connectionPool");
         try {
             connPool.closeConnectionPool();

@@ -1,4 +1,4 @@
-package goods.util;
+package admin.util;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

@@ -1,4 +1,4 @@
-package admin;
+package admin.servlet;
 
 import goods.util.ConnectionPool;
 
@@ -14,7 +14,7 @@ import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name = "admin.Login",
+@WebServlet(name = "admin.servlet.Login",
         urlPatterns = "/login.do")
 
 public class Login extends HttpServlet {

@@ -29,7 +29,6 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
      */
 
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        System.out.println("post received");
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out=response.getWriter();
@@ -66,14 +65,12 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
                         stmt.executeUpdate(sbsql.toString());
                         System.out.println("Add success.");
                         request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
-
                     }
                     break;
                 case "modify":
                     sbsql.append("UPDATE customer_info SET ");
                     if(paprameters != null  && paprameters.get("id") != null ) {
                         for (Map.Entry<String, String> entry : paprameters.entrySet()) {
-                            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
                             if(entry.getValue() != null || !entry.getValue().equals(""))
                                 sbsql.append(entry.getKey()+"='"+entry.getValue()+"',");
                         }
