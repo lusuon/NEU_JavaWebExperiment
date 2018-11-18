@@ -7,32 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e15cad93-a7a7-4bc8-a31f-da3478634b39" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/goods/servlet/GoodsServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/goods/util/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/admin/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/admin/servlet/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/admin/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/admin/servlet/Logout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentProject/src/goods/servlet/uploadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/goods/servlet/uploadServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/goods/util/GetExtentionName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/goods/util/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/admin/util/AdminFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/goods/util/AdminListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/admin/util/AdminListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentProject/src/goods/util/PicFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/goods/util/PicFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/testPath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/src/user/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/src/user/IndexServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentProject/web/Goods.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/Goods.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/Listener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/goods/servlet/GoodsServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/Listener.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/goods/servlet/uploadServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/goods/servlet/uploadServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/goods/util/GetExtentionName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/goods/util/CheckErrorFilter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/goods/util/PicFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/goods/util/PicFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/testPath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/user/IndexServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/classes/user/IndexServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentProject/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentProject/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/Goods.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/Goods.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/Listener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/goods/servlet/GoodsServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/Listener.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/goods/servlet/uploadServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/goods/servlet/uploadServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/goods/util/GetExtentionName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/goods/util/CheckErrorFilter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/goods/util/PicFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/goods/util/PicFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/testPath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/upload/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/upload/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/user/IndexServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/WEB-INF/classes/user/IndexServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,19 +143,21 @@
     <session id="2140158410">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="3" />
-          <entry key="java" value="39" />
+          <entry key="java" value="65" />
           <entry key="js" value="1" />
-          <entry key="jsp" value="6" />
+          <entry key="jsp" value="8" />
           <entry key="xhtml" value="1" />
           <entry key="xml" value="2" />
         </counts>
@@ -166,8 +165,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="JAVA" value="39" />
-          <entry key="JSP" value="6" />
+          <entry key="JAVA" value="65" />
+          <entry key="JSP" value="8" />
           <entry key="JavaScript" value="1" />
           <entry key="XHTML" value="1" />
           <entry key="XML" value="2" />
@@ -176,16 +175,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="ft" value="4" />
-          <entry key="java" value="2954" />
+          <entry key="java" value="4271" />
           <entry key="js" value="1" />
-          <entry key="jsp" value="604" />
+          <entry key="jsp" value="610" />
           <entry key="xml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2954" />
-          <entry key="JSP" value="603" />
+          <entry key="JAVA" value="4271" />
+          <entry key="JSP" value="609" />
           <entry key="JavaScript" value="1" />
           <entry key="SQL" value="1" />
           <entry key="VTL" value="4" />
@@ -201,46 +200,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/src/Listener.java">
+        <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/Listener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="65" column="46" lean-forward="true" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/servlet/uploadServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+            <state relative-caret-position="874">
+              <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/web/index.jsp">
+        <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/PicFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="58" column="81" lean-forward="true" selection-start-line="58" selection-start-column="81" selection-end-line="58" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/AdminListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-661">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/AdminFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="37" column="34" lean-forward="true" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+            <state relative-caret-position="342">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -248,29 +220,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/ConnectionPool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/PicFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="40" column="96" selection-start-line="40" selection-start-column="96" selection-end-line="40" selection-end-column="96" />
-              <folding>
-                <element signature="e#478#486#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExperimentProject/web/Goods.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="69" column="65" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
+            <state relative-caret-position="266">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -281,9 +232,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="jsf" />
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -300,9 +252,38 @@
       <find>CustomerList</find>
       <find>path</find>
       <find>separator</find>
+      <find>v</find>
+      <find>name</find>
+      <find>Supplier</find>
+      <find>CostPrice</find>
+      <find>Dir_id</find>
+      <find>t_goodduct</find>
+      <find>Brand</find>
+      <find>Product</find>
+      <find>brand</find>
+      <find>supplier</find>
+      <find>salePrice</find>
+      <find>pro</find>
+      <find>IR</find>
+      <find>Long id</find>
+      <find>goodtected</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
+      <replace>id</replace>
+      <replace>Name</replace>
+      <replace>Category</replace>
+      <replace>Desc</replace>
+      <replace>goods</replace>
+      <replace>GoodsBean</replace>
+      <replace>Factory</replace>
+      <replace>Good</replace>
+      <replace>factory</replace>
+      <replace>category</replace>
+      <replace>origin</replace>
+      <replace>good</replace>
+      <replace>String id</replace>
+      <replace>protected</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Jackson Ma\Documents\GitHub\NEU_JavaWebExperiment\ExperimentProject\web\WEB-INF\lib</dir>
@@ -313,6 +294,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExperimentProject/src/goods/servlet/uploadServlet.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -338,24 +320,32 @@
         <option value="$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/goods.xhtml" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/goods.jsp" />
-        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/servlet/GoodsServlet.java" />
-        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/GoodsBean.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/AdminListener.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/AdminFilter.java" />
-        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/ConnectionPool.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/GetExtentionName.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/testPath.java" />
-        <option value="$PROJECT_DIR$/ExperimentProject/src/user/IndexServlet.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/Error.jsp" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/Listener.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/upload.js" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/CheckErrorFilter.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/admin/Login.java" />
-        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/servlet/uploadServlet.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/Goods.jsp" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/Listener.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/PicFilter.java" />
         <option value="$PROJECT_DIR$/ExperimentProject/web/index.jsp" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/user/IndexServlet.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/servlet/uploadServlet.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/GoodsBean.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/IGoodDAO.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/IResultSetHandler.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/ProductResultSetHandler.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/servlet/GoodsServlet.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/servlet/GoodDAOImpl.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/GoodDAOImpl.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/servlet/GoodServlet.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/ConnectionPool.java" />
+        <option value="$PROJECT_DIR$/ExperimentProject/src/goods/util/JdbcTemplate.java" />
       </list>
     </option>
   </component>
@@ -374,8 +364,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="width" value="978" />
-    <option name="height" value="1040" />
+    <option name="width" value="1390" />
+    <option name="height" value="1756" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -419,22 +409,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="goods" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="NEU_JavaWebExperiment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542427777931" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542463653737" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/ExperimentProject_war_exploded/upload" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -444,15 +429,18 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\54234\Documents\GitHub\NEU_JavaWebExperiment\ExperimentProject\web\WEB-INF" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jackson Ma\Documents\GitHub\NEU_JavaWebExperiment\ExperimentProject\web\WEB-INF\lib" />
       <recent name="C:\Users\54234\Documents\GitHub\NEU_JavaWebExperiment\ExperimentProject\web" />
       <recent name="C:\Users\54234\Documents\GitHub\NEU_JavaWebExperiment\ExperimentProject\web\WEB-INF" />
       <recent name="F:\java\NEU_JavaWebExperiment\ExperimentProject\web" />
       <recent name="C:\Users\54234\Documents\GitHub\NEU_JavaWebExperiment\ExperimentProject\web\JSP" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="goods.servlet" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\54234\Documents\GitHub\NEU_JavaWebExperiment\ExperimentProject\web\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -724,37 +712,39 @@
       <workItem from="1542289922462" duration="8794000" />
       <workItem from="1542329390776" duration="4699000" />
       <workItem from="1542383241969" duration="1438000" />
+      <workItem from="1542436736454" duration="11890000" />
+      <workItem from="1542512741935" duration="178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186547000" />
+    <option name="totallyTimeSpent" value="203600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.459375" visible="true" weight="0.19274376" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.45849803" visible="true" weight="0.18594104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.540625" side_tool="true" visible="true" weight="0.19274376" />
+      <window_info id="Web" order="7" sideWeight="0.541502" side_tool="true" visible="true" weight="0.18594104" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32707775" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4988662" visible="true" weight="0.5750332" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32669324" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49811035" weight="0.312085" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32907802" />
       <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4988662" weight="0.32669324" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5011338" side_tool="true" weight="0.32005313" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32802126" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50037795" side_tool="true" weight="0.32669324" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32802126" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32793018" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49962208" weight="0.32669324" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -825,14 +815,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ExperimentProject/src/Index.java" />
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/admin/Logout.java" />
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="25" column="67" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ExperimentProject/web/goods.xhtml" />
     <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerModify.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -849,7 +831,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/DBUtil.java" />
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/GoodsBean.java" />
     <entry file="jar://$PROJECT_DIR$/lib/commons-fileupload-1.3.3.jar!/org/apache/commons/fileupload/FileItem.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -864,13 +845,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/testPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/testPath.java" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/io/File.java" />
     <entry file="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/ServletContext.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -879,23 +854,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/user/IndexServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="87" column="21" lean-forward="true" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/servlet/GoodsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/upload.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/upload.js" />
     <entry file="file://$PROJECT_DIR$/ExperimentProject/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -903,93 +862,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/GetExtentionName.java">
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/GetExtentionName.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/CheckErrorFilter.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/Error.jsp" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/CustomerAdd.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/CheckErrorFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="62" lean-forward="true" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/admin/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="88" column="18" lean-forward="true" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/Error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="19">
+          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
           <folding>
-            <element signature="n#body#0;n#html#0;n#!!top" />
+            <element signature="n#!!doc;n#jsp:root#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/Listener.java">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="65" column="46" lean-forward="true" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+        <state relative-caret-position="278">
+          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/Goods.jsp">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="69" column="65" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
+        <state relative-caret-position="221">
+          <caret line="5448" column="30" selection-start-line="5448" selection-start-column="30" selection-end-line="5448" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/AdminListener.java">
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/user/IndexServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-661">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="-477">
+          <caret line="66" column="99" selection-start-line="66" selection-start-column="99" selection-end-line="66" selection-end-column="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/AdminFilter.java">
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/admin/servlet/Logout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="37" column="34" lean-forward="true" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/ConnectionPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
+        <state relative-caret-position="95">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/PicFilter.java">
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/admin/servlet/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="40" column="96" selection-start-line="40" selection-start-column="96" selection-end-line="40" selection-end-column="96" />
-          <folding>
-            <element signature="e#478#486#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/servlet/uploadServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="133">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExperimentProject/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="58" column="81" lean-forward="true" selection-start-line="58" selection-start-column="81" selection-end-line="58" selection-end-column="81" />
+        <state relative-caret-position="36">
+          <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
+          <folding>
+            <element signature="e#96#244#0#JSP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/admin/util/AdminListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/admin/util/AdminFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/servlet/uploadServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/servlet/GoodsServlet.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/servlet/GoodDAOImpl.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/web/Goods.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="69" column="51" lean-forward="true" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/GoodsBean.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/GoodsBeanResultSetHandler.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/IGoodDAO.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/IResultSetHandler.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/JdbcTemplate.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/GoodDAOImpl.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/servlet/GoodServlet.java" />
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentProject/src/goods/util/PicFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
@@ -1061,6 +1049,17 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>mysql-connector-java-8.0.12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

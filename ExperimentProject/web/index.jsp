@@ -29,9 +29,6 @@
         <c:redirect url="/Goods.jsp"/>
     </c:if>
 
-
-
-
     <div class="container">
         <div class="row clearfix">
             <div class="col-md-12 column">
@@ -40,7 +37,7 @@
                         Hello, world!
                     </h1>
                     <p>
-                        <span>This is a simple demo for NEU Java Web experiment.It currently includes a module for managing the database of "users".</span>
+                        <span>This is a simple demo for NEU Java Web experiment.</span>
                     </p>
                     <p>
                         <a class="btn btn-primary btn-large" href="https://github.com/lusuon/NEU_JavaWebExperiment">Find me on github</a>
@@ -57,6 +54,7 @@
                             <label><input type="checkbox" name="login" value="auto" />Remember me</label>
                         </div>
                     <button type="submit" class="btn btn-default">Log in</button>
+
                     </form>
                     </p>
                 </div>
