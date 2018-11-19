@@ -16,53 +16,65 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>编辑产品</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>编辑商品</title>
 </head>
 <body>
-<form action="/goods.do" method="post">
-
-    <table border="1" cellpadding="0" cellspacing="0">
-        <c:choose>
-            <c:when test="${param.id eq null}">
+<div class="container">
+    <div class="row clearfix">
+    <div class="col-md-12 column">
+        <div class="page-header">
+            <h1>
+                商品管理系统 <small><a href="Goods.jsp">返回主系统</a></small>
+            </h1>
+        </div>
+    </div>
+</div>
+    <div cllas="col-md-12 column" style="text-align:center;vertical-align: center;margin:auto">
+        <form action="/goods.do" method="post">
+            <table class="table table-striped table-hover table-condensed" rownumbers="true" fitcolumns="true" singleselect="true">
+                <c:choose>
+                    <c:when test="${param.id eq null}">
+                        <tr>
+                            <td>商品ID</td>
+                            <td><input type="text" name="id"/></td>
+                            <td><input type="hidden" name="add" value="add"></td>
+                        </tr>
+                    </c:when>
+                    <c:otherwise>
+                        <input type="hidden" name="id" value="${good.id}"/>
+                    </c:otherwise>
+                </c:choose>
                 <tr>
-                    <td>商品ID</td>
-                    <td><input type="text" name="id"/></td>
-                    <td><input type="hidden" name="add" value="add"></td>
+                    <td>商品名</td>
+                    <td><input type="text" name="name" value="${good.name}"/></td>
                 </tr>
-            </c:when>
-            <c:otherwise>
-                <input type="hidden" name="id" value="${good.id}"/>
-            </c:otherwise>
-        </c:choose>
-        <tr>
-            <td>商品名</td>
-            <td><input type="text" name="name" value="${good.name}"/></td>
-        </tr>
-        <tr>
-            <td>厂商</td>
-            <td><input type="text" name="factory" value="${good.factory}"/></td>
-        </tr>
-        <tr>
-            <td>类别</td>
-            <td><input type="text" name="category" value="${good.category}"/></td>
-        </tr>
-        <tr>
-            <td>型号</td>
-            <td><input type="text" name="type" value="${good.type}"/></td>
-        </tr>
-        <tr>
-            <td>产地</td>
-            <td><input type="text" name="origin" value="${good.origin}"/></td>
-        </tr>
-        <tr>
-            <td>描述</td>
-            <td><input type="text" name="description" value="${good.description}"/></td>
-        </tr>
-        <tr>
-            <input type="hidden" name="cmd" value="save">
-            <td colspan="2"><input type="submit" value="保存"/></td>
-        </tr>
-    </table>
-</form>
+                <tr>
+                    <td>厂商</td>
+                    <td><input type="text" name="factory" value="${good.factory}"/></td>
+                </tr>
+                <tr>
+                    <td>类别</td>
+                    <td><input type="text" name="category" value="${good.category}"/></td>
+                </tr>
+                <tr>
+                    <td>型号</td>
+                    <td><input type="text" name="type" value="${good.type}"/></td>
+                </tr>
+                <tr>
+                    <td>产地</td>
+                    <td><input type="text" name="origin" value="${good.origin}"/></td>
+                </tr>
+                <tr>
+                    <td>描述</td>
+                    <td><input type="text" name="description" value="${good.description}"/></td>
+                </tr>
+                <tr>
+                    <input type="hidden" name="cmd" value="save">
+                    <td colspan="2"><input type="submit" value="保存"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 </html>

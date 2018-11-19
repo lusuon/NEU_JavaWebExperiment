@@ -42,7 +42,7 @@
             </div>
         </div>
     </div>
-    <h1>以下为JSTL标签实现</h1>
+    <h1>以下为JSTL的sql标签实现</h1>
     <div>
         <table id="goods" title="商品信息" class="table table-striped table-hover table-condensed"   rownumbers="true" fitcolumns="true" singleselect="true" style="text-align:center;vertical-align: center;margin:auto">
             <thead style="text-align:center">
@@ -74,7 +74,7 @@
                 <td><c:out value="${row.factory}"/></td>
                 <td><c:out value="${row.category}"/></td>
                 <td><c:out value="${row.type}"/></td>
-                <td><c:out value="${row.orgin}"/></td>
+                <td><c:out value="${row.origin}"/></td>
                 <td><c:out value="${row.description}"/></td>
                 <td>
                     <form role="form" action="/upload.do" method="post" enctype="multipart/form-data" >
@@ -133,11 +133,12 @@
                                 <input hidden name="fileName" value="${good.id}"/>
                                 <td><input type="file" name="file" accept="image/x-png,image/gif,image/jpeg" /></td>
                                 <td><button type="submit" class="btn btn-default">上传图片</button></td>
+                                <td><a href="/goods.do?cmd=delete&id=${good.id}" class="btn btn-default">删除</a></td>
+                                <td><a href="/edit.jsp?cmd=edit&id=${good.id}" class="btn btn-default">编辑</a></td>
                             </tr>
                         </table>
                     </form>
-                    <a href="/goods.do?cmd=delete&id=${good.id}" class="btn btn-default">删除</a>
-                    <a href="/edit.jsp?cmd=edit&id=${good.id}" class="btn btn-default">编辑</a>
+
                 </td>
             </tr>
         </c:forEach>

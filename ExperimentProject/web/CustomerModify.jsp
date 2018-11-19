@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*" %>
-<%@ page import="goods.util.ConnectionPool" %><%--
+<%@ page import="goods.util.JDBCUtil" %><%--
   Created by IntelliJ IDEA.
   User: 54234
   Date: 2018-10-12
@@ -9,8 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    ConnectionPool pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
-    Connection conn = pool.getConnection();
+    Connection conn = JDBCUtil.getConn();
     Statement stmt = conn.createStatement();
     String sql = "SELECT * FROM customer_info WHERE id = "+request.getParameter("id");
     ResultSet rs = stmt.executeQuery(sql);
