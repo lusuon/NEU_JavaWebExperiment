@@ -1,6 +1,6 @@
 package admin.servlet;
 
-import goods.util.ConnectionPool;
+import goods.util.JDBCUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,15 +36,14 @@ public class Login extends HttpServlet {
         String sql = "";
         PrintWriter out =response.getWriter();
         Connection conn = null;
-        Statement stmt = null;
-        ConnectionPool pool;
-        pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
         try {
-            conn = pool.getConnection();
-            stmt = conn.createStatement();
-            sql = "SELECT * FROM admins WHERE id='"+id+"'";
+            conn = JDBCUtil.getConn();
+            stmt = conn.prepareStatement("SELECT * FROM admins WHERE id= ?");
+            stmt.setString(1,id);
             System.out.println("logging sql: "+sql);
-            ResultSet rs = stmt.executeQuery(sql);
+            rs = stmt.executeQuery(sql);
             //rs.next()判断执行的搜索用户语句是否得到结果，有则说明ID存在
             if(rs.next()){
                 String pw_check = rs.getString("password");
@@ -97,7 +96,7 @@ public class Login extends HttpServlet {
                 if (stmt != null)
                     stmt.close();
             } catch (SQLException se2){}
-            if (conn != null) pool.returnConnection(conn);
+            if (conn != null) JDBCUtil.close(conn,stmt,rs);
         }
     }
 

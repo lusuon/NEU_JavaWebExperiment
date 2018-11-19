@@ -1,6 +1,6 @@
 package user;
 
-import goods.util.ConnectionPool;
+import goods.util.JDBCUtil;
 
 import java.io.IOException;
 
@@ -32,12 +32,11 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out=response.getWriter();
-        ConnectionPool pool;
-        pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
-        HashMap<String,String> paprameters = new HashMap<String,String>();
         Connection conn = null;
+        HashMap<String,String> paprameters = new HashMap<String,String>();
         Statement stmt = null;
         String sql; // sql语句
+        ResultSet rs = null;
         paprameters.put("id",request.getParameter("id")) ;
         paprameters.put("name",request.getParameter("name")) ;
         paprameters.put("gender", request.getParameter("gender"));
@@ -46,8 +45,9 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
         paprameters.put("home",request.getParameter("home")) ;
         //获取模式
         String mode = request.getParameter("mode");
+
         try {
-            conn = pool.getConnection();
+            conn = JDBCUtil.getConn();
             stmt = conn.createStatement();
             StringBuilder sbsql = new StringBuilder();
             System.out.println("receiving mode");
@@ -55,9 +55,9 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
                 case "add":
                     System.out.println("Adding");
                     if(request.getParameter("id").equals("")) out.print("<script language='javascript'>alert('ID missed');window.location.href='CustomerAdd.jsp';</script>");
-                    ResultSet check = stmt.executeQuery("SELECT * FROM customer_info WHERE id =\""+request.getParameter("id")+"\"");
+                    rs = stmt.executeQuery("SELECT * FROM customer_info WHERE id =\""+request.getParameter("id")+"\"");
                     System.out.println("SELECT * FROM customer_info WHERE id ="+request.getParameter("id"));
-                    if(check.next()){
+                    if(rs.next()){
                         out.print("<script language='javascript'>alert('ID duplicate');window.location.href='CustomerAdd.jsp';</script>");
                     }else{
                         sbsql.append("INSERT INTO customer_info ").append("VALUES ('").append(paprameters.get("id")+"','").append(paprameters.get("name")+"','").append(paprameters.get("gender")+"','").append(paprameters.get("job")+"','").append(paprameters.get("education")+"','").append(paprameters.get("home")).append("')");
@@ -109,7 +109,7 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
                         sbsql.append("SELECT * FROM customer_info");
                     }
                     System.out.println(sbsql.toString());
-                    ResultSet rs =stmt.executeQuery(sbsql.toString());
+                    rs =stmt.executeQuery(sbsql.toString());
                     request.setAttribute("result",rs);
                     request.setAttribute("searchDB",searchDB);
                     request.getRequestDispatcher("CustomerList.jsp").forward(request,response);
@@ -126,7 +126,7 @@ public class IndexServlet extends javax.servlet.http.HttpServlet {
                     e.printStackTrace();
                 }
             }
-            if (conn != null) pool.returnConnection(conn);
+            if (conn != null) JDBCUtil.close(conn,stmt,rs);
         }
 
 

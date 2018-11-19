@@ -1,6 +1,5 @@
 package goods.servlet;
 
-import javax.persistence.SqlResultSetMapping;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -9,20 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.*;
-import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-
-import goods.util.ConnectionPool;
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import goods.util.JDBCUtil;
 
 @MultipartConfig
 @WebServlet(name = "uploadServlet",urlPatterns = "/upload.do")
@@ -40,24 +31,25 @@ public class uploadServlet extends HttpServlet {
         if(allow_upload) {
             PrintWriter out = response.getWriter();
             //获取连接池
-            ConnectionPool pool = (ConnectionPool) request.getServletContext().getAttribute("connectionPool");
             Connection conn = null;
+            PreparedStatement ps =null;
             //获取上传文件的信息
             Part input = (Part)request.getAttribute("input");
             String ext_name = (String)request.getAttribute("ext_name");
+
 
             // 拼接文件名
             String name = request.getParameter("fileName") + "." + ext_name;
 
             try {
                 //获取连接
-                conn = pool.getConnection();
+                conn = JDBCUtil.getConn();
                 //设置为手动提交事务
                 conn.setAutoCommit(false);
                 Statement stmt = conn.createStatement();
                 //设置语句
                 String sql = "UPDATE goods SET path = ? WHERE ID = ? ";
-                PreparedStatement ps = conn.prepareStatement(sql);
+                ps = conn.prepareStatement(sql);
                 ps.setString(1,"upload/"+name);
                 ps.setString(2,request.getParameter("fileName"));
                 System.out.println(ps.toString());
@@ -100,9 +92,7 @@ public class uploadServlet extends HttpServlet {
                     }
 
                 } finally {
-
-                    pool.returnConnection(conn);
-
+                    JDBCUtil.close(conn, ps, null);
                 }
         }
 

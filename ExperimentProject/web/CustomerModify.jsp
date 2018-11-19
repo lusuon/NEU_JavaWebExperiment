@@ -46,7 +46,6 @@
                 </tr>
                 <tr class="text-left">
                     <td class="text-right">客户姓名：</td>
-
                     <td><input type='text' name='name' class="form-control" value='<%= rs.getString("name")%>'></td>
                 </tr>
                 <tr class="text-left">
